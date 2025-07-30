@@ -6,10 +6,12 @@
     'author': 'Mohamed Essam',
     'website': 'https://essamsalem.com',
     'category': 'Project',
-    'depends': ['project'],
+    'depends': ['project', 'crm', 'contacts', 'base'],
     'data': [
         'security/ir.model.access.csv',
         'views/project_views.xml',
+        'views/crm_client_fields_view.xml',
+        'views/res_partner_view.xml',
     ],
     'installable': True,
     'application': True,

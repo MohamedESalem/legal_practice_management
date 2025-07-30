@@ -7,33 +7,29 @@
         <field name="inherit_id" ref="project.edit_project" />
         <field name="arch" type="xml">
             <xpath expr="//page[@name='description']" position="before">
-
                 <page string="Legal Case Details">
-
-                    <group string="Case Identification">
-                        <field name="office_file_number" />
-                        <field name="court_name" />
-                        <field name="court_circle" />
-                        <field name="lawsuit_filing_date" />
-                        <field name="first_degree_case_number_year" />
-                        <field name="second_degree_case_number_year" />
+                    <group>
+                        <group string="Case Identification">
+                            <field name="office_file_number" />
+                            <field name="court_name" />
+                            <field name="court_circle" />
+                            <field name="lawsuit_filing_date" />
+                            <field name="first_degree_case_number_year" />
+                            <field name="second_degree_case_number_year" />
+                        </group>
+                        <group string="Client Details">
+                            <field name="client_status" />
+                        </group>
+                        <group string="Opponent Details">
+                            <field name="opponent_status" />
+                            <field name="opponent_name" />
+                            <field name="opponent_address" />
+                            <field name="opponent_phone" />
+                            <field name="opponent_attorney_name" />
+                            <field name="opponent_attorney_phone" />
+                        </group>
                     </group>
-
-                    <group string="Client Details" col="2">
-                        <field name="client_status" />
-                    </group>
-
-                    <group string="Opponent Details" col="2">
-                        <field name="opponent_status" />
-                        <field name="opponent_name" />
-                        <field name="opponent_address" />
-                        <field name="opponent_phone" />
-                        <field name="opponent_attorney_name" />
-                        <field name="opponent_attorney_phone" />
-                    </group>
-
                 </page>
-
             </xpath>
         </field>
     </record>

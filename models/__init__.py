@@ -1,1 +1,3 @@
-from . import project 
+from . import project
+from . import crm_lead
+from . import res_partner 

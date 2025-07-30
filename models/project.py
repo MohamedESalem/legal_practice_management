@@ -10,7 +10,6 @@ class ProjectProject(models.Model):
     )
     court_name = fields.Char(
         string="Court Name",
-        required=True,
         help="Court Name"
     )
     court_circle = fields.Char(
@@ -19,7 +18,6 @@ class ProjectProject(models.Model):
     )
     lawsuit_filing_date = fields.Date(
         string="Case Filing Date",
-        required=True,
         help="The date on which the lawsuit was filed in court"
     )
     first_degree_case_number_year = fields.Char(
@@ -32,17 +30,14 @@ class ProjectProject(models.Model):
     )
     client_status = fields.Char(
         string="Client Status",
-        required=True,
         help="The client's status in the case e.g(Plaintiff, Defendant, Third Party, etc.)"
     )
     opponent_status = fields.Char(
         string="Opponent Status",
-        required=True,
         help="The opponent's status in the case e.g(Plaintiff, Defendant, Third Party, etc.)"
     )
     opponent_name = fields.Char(
         string="Opponent's Name",
-        required=True,
         help="Name of the opposing party"
     )
     opponent_address = fields.Text(

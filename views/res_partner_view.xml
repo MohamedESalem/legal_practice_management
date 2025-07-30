@@ -1,0 +1,38 @@
+<!-- Merged from crm_client_fields v1.0 on 2025-07-30 by Mohamed Essam -->
+<odoo>
+    <record id="view_res_partner_form_client_fields_lcm" model="ir.ui.view">
+        <field name="name">res.partner.form.client.fields.lcm</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Client Information">
+                    <group>
+                        <group string="General">
+                            <field name="x_client_open_date" />
+                            <field name="x_name_en" />
+                            <field name="x_preferred_language" />
+                            <field name="x_communication_preferences" />
+                        </group>
+                        <group string="Personal (Individual)" invisible="is_company">
+                            <field name="x_nationality" />
+                            <field name="x_residence_country" />
+                            <field name="x_national_id" />
+                            <field name="x_passport_number" />
+                            <field name="x_birth_date" />
+                            <field name="x_sex" />
+                        </group>
+                        <group string="Company" invisible="not is_company">
+                            <field name="x_representative" />
+                            <field name="x_representative_title" />
+                            <field name="x_entity_type" />
+                            <field name="x_commercial_register_no" />
+                            <field name="x_tax_registration_number" />
+                            <field name="x_company_activity" />
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo> 

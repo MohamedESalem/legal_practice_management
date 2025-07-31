@@ -33,16 +33,4 @@
             </xpath>
         </field>
     </record>
-
-    <!-- Rename the Project app and menu to 'Cases & Matters' -->
-    <data noupdate="1">
-        <!-- Rename the Project app and menu to 'Cases & Matters' -->
-        <record id="project.menu_main_pm" model="ir.ui.menu">
-            <field name="name">Cases &amp; Matters</field>
-        </record>
-        <!-- Main menu label -->
-        <record id="project.menu_projects" model="ir.ui.menu">
-            <field name="name">Cases &amp; Matters</field>
-        </record>
-    </data>
 </odoo>

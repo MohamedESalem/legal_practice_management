@@ -9,6 +9,7 @@
     'depends': ['project', 'crm', 'contacts', 'base'],
     'data': [
         'security/ir.model.access.csv',
+        'data/legal_case_data.xml',
         'views/project_views.xml',
         'views/crm_client_fields_view.xml',
         'views/res_partner_view.xml',
@@ -16,4 +17,14 @@
     'installable': True,
     'application': True,
     'license': 'LGPL-3',
+    'images': [],
+    'demo': [],
+    'test': [],
+    'css': [],
+    'js': [],
+    'qweb': [],
+    'installable': True,
+    'auto_install': False,
+    'application': True,
+    'sequence': 1,
 } 

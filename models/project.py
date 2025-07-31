@@ -1,58 +1,59 @@
-from odoo import models, fields
+from odoo import models, fields, api, _
 
 class ProjectProject(models.Model):
     _inherit = 'project.project'
+    _description = 'Legal Case Project'
 
     office_file_number = fields.Char(
-        string="File Number in the Office",
+        string=_("File Number in the Office"),
         required=True,
-        help="Internal reference number used by the law firm"
+        help=_("Internal reference number used by the law firm")
     )
     court_name = fields.Char(
-        string="Court Name",
-        help="Court Name"
+        string=_("Court Name"),
+        help=_("Court Name")
     )
     court_circle = fields.Char(
-        string="Court Circle",
-        help="Court circle"
+        string=_("Court Circle"),
+        help=_("Court circle")
     )
     lawsuit_filing_date = fields.Date(
-        string="Case Filing Date",
-        help="The date on which the lawsuit was filed in court"
+        string=_("Case Filing Date"),
+        help=_("The date on which the lawsuit was filed in court")
     )
     first_degree_case_number_year = fields.Char(
-        string="First Degree Case Number",
-        help="Number of the first degree case in court"
+        string=_("First Degree Case Number"),
+        help=_("Number of the first degree case in court")
     )
     second_degree_case_number_year = fields.Char(
-        string="Second Degree Case Number",
-        help="Number of the appeal or second degree case in court"
+        string=_("Second Degree Case Number"),
+        help=_("Number of the appeal or second degree case in court")
     )
     client_status = fields.Char(
-        string="Client Status",
-        help="The client's status in the case e.g(Plaintiff, Defendant, Third Party, etc.)"
+        string=_("Client Status"),
+        help=_("The client's status in the case e.g(Plaintiff, Defendant, Third Party, etc.)")
     )
     opponent_status = fields.Char(
-        string="Opponent Status",
-        help="The opponent's status in the case e.g(Plaintiff, Defendant, Third Party, etc.)"
+        string=_("Opponent Status"),
+        help=_("The opponent's status in the case e.g(Plaintiff, Defendant, Third Party, etc.)")
     )
     opponent_name = fields.Char(
-        string="Opponent's Name",
-        help="Name of the opposing party"
+        string=_("Opponent's Name"),
+        help=_("Name of the opposing party")
     )
     opponent_address = fields.Text(
-        string="Opponent's Address",
-        help="Address of the opposing party"
+        string=_("Opponent's Address"),
+        help=_("Address of the opposing party")
     )
     opponent_phone = fields.Char(
-        string="Opponent's Phone Number",
-        help="Contact number of the opposing party"
+        string=_("Opponent's Phone Number"),
+        help=_("Contact number of the opposing party")
     )
     opponent_attorney_name = fields.Char(
-        string="Opponent's Attorney's Name",
-        help="Name of the opposing attorney"
+        string=_("Opponent's Attorney's Name"),
+        help=_("Name of the opposing attorney")
     )
     opponent_attorney_phone = fields.Char(
-        string="Opponent's Attorney's Phone",
-        help="Contact number of the opposing attorney"
+        string=_("Opponent's Attorney's Phone"),
+        help=_("Contact number of the opposing attorney")
     ) 

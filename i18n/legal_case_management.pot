@@ -1,0 +1,446 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* legal_case_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-27 10:00+0000\n"
+"PO-Revision-Date: 2025-01-27 10:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_project_project__office_file_number
+msgid "File Number in the Office"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,help:legal_case_management.field_project_project__office_file_number
+msgid "Internal reference number used by the law firm"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_project_project__court_name
+msgid "Court Name"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,help:legal_case_management.field_project_project__court_name
+msgid "Court Name"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_project_project__court_circle
+msgid "Court Circle"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,help:legal_case_management.field_project_project__court_circle
+msgid "Court circle"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_project_project__lawsuit_filing_date
+msgid "Case Filing Date"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,help:legal_case_management.field_project_project__lawsuit_filing_date
+msgid "The date on which the lawsuit was filed in court"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_project_project__first_degree_case_number_year
+msgid "First Degree Case Number"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,help:legal_case_management.field_project_project__first_degree_case_number_year
+msgid "Number of the first degree case in court"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_project_project__second_degree_case_number_year
+msgid "Second Degree Case Number"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,help:legal_case_management.field_project_project__second_degree_case_number_year
+msgid "Number of the appeal or second degree case in court"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_project_project__client_status
+msgid "Client Status"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,help:legal_case_management.field_project_project__client_status
+msgid "The client's status in the case e.g(Plaintiff, Defendant, Third Party, etc.)"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_project_project__opponent_status
+msgid "Opponent Status"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,help:legal_case_management.field_project_project__opponent_status
+msgid "The opponent's status in the case e.g(Plaintiff, Defendant, Third Party, etc.)"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_project_project__opponent_name
+msgid "Opponent's Name"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,help:legal_case_management.field_project_project__opponent_name
+msgid "Name of the opposing party"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_project_project__opponent_address
+msgid "Opponent's Address"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,help:legal_case_management.field_project_project__opponent_address
+msgid "Address of the opposing party"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_project_project__opponent_phone
+msgid "Opponent's Phone Number"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,help:legal_case_management.field_project_project__opponent_phone
+msgid "Contact number of the opposing party"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_project_project__opponent_attorney_name
+msgid "Opponent's Attorney's Name"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,help:legal_case_management.field_project_project__opponent_attorney_name
+msgid "Name of the opposing attorney"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_project_project__opponent_attorney_phone
+msgid "Opponent's Attorney's Phone"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,help:legal_case_management.field_project_project__opponent_attorney_phone
+msgid "Contact number of the opposing attorney"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_client_open_date
+msgid "Client Open Date"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_name_en
+msgid "Name in English"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_nationality
+msgid "Nationality"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_residence_country
+msgid "Residence Country"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_national_id
+msgid "National ID"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_passport_number
+msgid "Passport Number"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_birth_date
+msgid "Birth Date"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_sex
+msgid "Sex"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_preferred_language
+msgid "Preferred Language"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_communication_preferences
+msgid "Communication Preferences"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_representative
+msgid "Representative"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_representative_title
+msgid "Representative Title"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_entity_type
+msgid "Entity Type"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_commercial_register_no
+msgid "Commercial Register No."
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_tax_registration_number
+msgid "Tax Registration Number"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_company_activity
+msgid "Company Activity"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_client_open_date
+msgid "Client Open Date"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_name_en
+msgid "Name in English"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_nationality
+msgid "Nationality"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_residence_country
+msgid "Residence Country"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_national_id
+msgid "National ID"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_passport_number
+msgid "Passport Number"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_birth_date
+msgid "Birth Date"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_sex
+msgid "Sex"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_preferred_language
+msgid "Preferred Language"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_communication_preferences
+msgid "Communication Preferences"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_representative
+msgid "Representative"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_representative_title
+msgid "Representative Title"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_entity_type
+msgid "Entity Type"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_commercial_register_no
+msgid "Commercial Register No."
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_tax_registration_number
+msgid "Tax Registration Number"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_company_activity
+msgid "Company Activity"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields.selection,name:legal_case_management.selection__res_partner__x_preferred_language__ar
+#: model:ir.model.fields.selection,name:legal_case_management.selection__crm_lead__x_preferred_language__ar
+msgid "Arabic"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields.selection,name:legal_case_management.selection__res_partner__x_preferred_language__en
+#: model:ir.model.fields.selection,name:legal_case_management.selection__crm_lead__x_preferred_language__en
+msgid "English"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields.selection,name:legal_case_management.selection__res_partner__x_preferred_language__fr
+#: model:ir.model.fields.selection,name:legal_case_management.selection__crm_lead__x_preferred_language__fr
+msgid "French"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields.selection,name:legal_case_management.selection__res_partner__x_preferred_language__other
+#: model:ir.model.fields.selection,name:legal_case_management.selection__crm_lead__x_preferred_language__other
+msgid "Other"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields.selection,name:legal_case_management.selection__res_partner__x_entity_type__llc
+#: model:ir.model.fields.selection,name:legal_case_management.selection__crm_lead__x_entity_type__llc
+msgid "LLC"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields.selection,name:legal_case_management.selection__res_partner__x_entity_type__jsc
+#: model:ir.model.fields.selection,name:legal_case_management.selection__crm_lead__x_entity_type__jsc
+msgid "JSC"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields.selection,name:legal_case_management.selection__res_partner__x_entity_type__partnership
+#: model:ir.model.fields.selection,name:legal_case_management.selection__crm_lead__x_entity_type__partnership
+msgid "Partnership"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields.selection,name:legal_case_management.selection__res_partner__x_entity_type__other
+#: model:ir.model.fields.selection,name:legal_case_management.selection__crm_lead__x_entity_type__other
+msgid "Other"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields.selection,name:legal_case_management.selection__res_partner__x_sex__male
+#: model:ir.model.fields.selection,name:legal_case_management.selection__crm_lead__x_sex__male
+msgid "Male"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.model.fields.selection,name:legal_case_management.selection__res_partner__x_sex__female
+#: model:ir.model.fields.selection,name:legal_case_management.selection__crm_lead__x_sex__female
+msgid "Female"
+msgstr ""
+
+#. module: legal_case_management
+#: model_terms:ir.ui.view,arch_db:legal_case_management.view_project_form_legal_case
+msgid "Legal Case Details"
+msgstr ""
+
+#. module: legal_case_management
+#: model_terms:ir.ui.view,arch_db:legal_case_management.view_project_form_legal_case
+msgid "Case Identification"
+msgstr ""
+
+#. module: legal_case_management
+#: model_terms:ir.ui.view,arch_db:legal_case_management.view_project_form_legal_case
+msgid "Client Details"
+msgstr ""
+
+#. module: legal_case_management
+#: model_terms:ir.ui.view,arch_db:legal_case_management.view_project_form_legal_case
+msgid "Opponent Details"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.ui.menu,name:project.menu_main_pm
+msgid "Cases & Matters"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.ui.menu,name:project.menu_projects
+msgid "Cases & Matters"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.ui.menu,name:legal_case_management.menu_legal_cases
+msgid "Cases & Matters"
+msgstr ""
+
+#. module: legal_case_management
+#: model:ir.ui.menu,name:legal_case_management.menu_legal_matters
+msgid "Legal Matters"
+msgstr ""
+
+#. module: legal_case_management
+#: model_terms:ir.ui.view,arch_db:legal_case_management.view_res_partner_form_client_fields_lcm
+msgid "Client Information"
+msgstr ""
+
+#. module: legal_case_management
+#: model_terms:ir.ui.view,arch_db:legal_case_management.view_res_partner_form_client_fields_lcm
+msgid "General"
+msgstr ""
+
+#. module: legal_case_management
+#: model_terms:ir.ui.view,arch_db:legal_case_management.view_res_partner_form_client_fields_lcm
+msgid "Personal (Individual)"
+msgstr ""
+
+#. module: legal_case_management
+#: model_terms:ir.ui.view,arch_db:legal_case_management.view_res_partner_form_client_fields_lcm
+msgid "Company"
+msgstr ""
+
+#. module: legal_case_management
+#: model_terms:ir.ui.view,arch_db:legal_case_management.view_crm_lead_form_client_fields_lcm
+msgid "Client Information"
+msgstr ""
+
+#. module: legal_case_management
+#: model_terms:ir.ui.view,arch_db:legal_case_management.view_crm_lead_form_client_fields_lcm
+msgid "General"
+msgstr ""
+
+#. module: legal_case_management
+#: model_terms:ir.ui.view,arch_db:legal_case_management.view_crm_lead_form_client_fields_lcm
+msgid "Personal (Individual)"
+msgstr ""
+
+#. module: legal_case_management
+#: model_terms:ir.ui.view,arch_db:legal_case_management.view_crm_lead_form_client_fields_lcm
+msgid "Company"
+msgstr "" 

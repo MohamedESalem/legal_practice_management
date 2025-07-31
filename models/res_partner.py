@@ -1,39 +1,29 @@
-# Merged from crm_client_fields v1.0 on 2025-07-30 by Mohamed Essam
-from odoo import models, fields, _
+# -*- coding: utf-8 -*-
+"""
+Legal Case Management - Partner Extensions
+Extends res.partner with legal case management fields.
+"""
 
-LANGUAGE_SELECTION = [
-    ('ar', 'Arabic'),
-    ('en', 'English'),
-    ('fr', 'French'),
-    ('other', 'Other'),
-]
-ENTITY_TYPE_SELECTION = [
-    ('llc', 'LLC'),
-    ('jsc', 'JSC'),
-    ('partnership', 'Partnership'),
-    ('other', 'Other'),
-]
-SEX_SELECTION = [
-    ('male', 'Male'),
-    ('female', 'Female')
-]
+from odoo import models, fields, _
+from .constants import LANGUAGE_SELECTION, ENTITY_TYPE_SELECTION, SEX_SELECTION
 
 class ResPartner(models.Model):
     _inherit = 'res.partner'
+    _description = 'Legal Case Partner'
 
-    x_client_open_date = fields.Date(string='Client Open Date')
-    x_name_en = fields.Char(string='Name in English')
-    x_nationality = fields.Many2one('res.country', string='Nationality')
-    x_residence_country = fields.Many2one('res.country', string='Residence Country')
-    x_national_id = fields.Char(string='National ID')
-    x_passport_number = fields.Char(string='Passport Number')
-    x_birth_date = fields.Date(string='Birth Date')
-    x_sex = fields.Selection(SEX_SELECTION, string='Sex')
-    x_preferred_language = fields.Selection(LANGUAGE_SELECTION, string='Preferred Language')
-    x_communication_preferences = fields.Text(string='Communication Preferences')
-    x_representative = fields.Char(string='Representative')
-    x_representative_title = fields.Char(string='Representative Title')
-    x_entity_type = fields.Selection(ENTITY_TYPE_SELECTION, string='Entity Type')
-    x_commercial_register_no = fields.Char(string='Commercial Register No.')
-    x_tax_registration_number = fields.Char(string='Tax Registration Number')
-    x_company_activity = fields.Char(string='Company Activity') 
+    x_client_open_date = fields.Date(string=_('Client Open Date'))
+    x_name_en = fields.Char(string=_('Name in English'))
+    x_nationality = fields.Many2one('res.country', string=_('Nationality'))
+    x_residence_country = fields.Many2one('res.country', string=_('Residence Country'))
+    x_national_id = fields.Char(string=_('National ID'))
+    x_passport_number = fields.Char(string=_('Passport Number'))
+    x_birth_date = fields.Date(string=_('Birth Date'))
+    x_sex = fields.Selection(SEX_SELECTION, string=_('Sex'))
+    x_preferred_language = fields.Selection(LANGUAGE_SELECTION, string=_('Preferred Language'))
+    x_communication_preferences = fields.Text(string=_('Communication Preferences'))
+    x_representative = fields.Char(string=_('Representative'))
+    x_representative_title = fields.Char(string=_('Representative Title'))
+    x_entity_type = fields.Selection(ENTITY_TYPE_SELECTION, string=_('Entity Type'))
+    x_commercial_register_no = fields.Char(string=_('Commercial Register No.'))
+    x_tax_registration_number = fields.Char(string=_('Tax Registration Number'))
+    x_company_activity = fields.Char(string=_('Company Activity')) 

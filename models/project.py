@@ -6,7 +6,7 @@ class ProjectProject(models.Model):
 
     office_file_number = fields.Char(
         string=_("File Number in the Office"),
-        required=True,
+        # required=True,
         help=_("Internal reference number used by the law firm")
     )
     court_name = fields.Char(

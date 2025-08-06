@@ -388,23 +388,18 @@ msgstr "تفاصيل الخصم"
 
 #. module: legal_case_management
 #: model:ir.ui.menu,name:project.menu_main_pm
-msgid "Cases & Matters"
-msgstr "القضايا والمسائل"
+msgid "Cases"
+msgstr "القضايا"
 
 #. module: legal_case_management
 #: model:ir.ui.menu,name:project.menu_projects
-msgid "Cases & Matters"
-msgstr "القضايا والمسائل"
+msgid "Cases"
+msgstr "القضايا"
 
 #. module: legal_case_management
 #: model:ir.ui.menu,name:legal_case_management.menu_legal_cases
-msgid "Cases & Matters"
-msgstr "القضايا والمسائل"
-
-#. module: legal_case_management
-#: model:ir.ui.menu,name:legal_case_management.menu_legal_matters
-msgid "Legal Matters"
-msgstr "المسائل القانونية"
+msgid "Cases"
+msgstr "القضايا"
 
 #. module: legal_case_management
 #: model_terms:ir.ui.view,arch_db:legal_case_management.view_res_partner_form_client_fields_lcm

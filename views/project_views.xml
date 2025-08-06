@@ -33,4 +33,20 @@
             </xpath>
         </field>
     </record>
-</odoo>
+
+    <!-- Strict Cases Action -->
+    <record id="action_view_project_cases_strict" model="ir.actions.act_window">
+        <field name="name">(Stricted) All Cases</field>
+        <field name="res_model">project.project</field>
+        <field name="view_mode">kanban,list,form</field>
+        <field name="domain">[('tag_ids.name', '=', 'Case')]</field>
+        <field name="context">{'group_by': 'stage_id', 'create_from_cases': True}</field>
+    </record>
+
+    <!-- Add Strict Cases as a submenu -->
+    <menuitem id="menu_strict_cases"
+              name="All Cases"
+              parent="project.menu_main_pm"
+              action="legal_case_management.action_view_project_cases_strict"
+              sequence="0"/>
+s</odoo>

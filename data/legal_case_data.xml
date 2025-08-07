@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data noupdate="1">
-        <!-- Legal Case Management Menu Structure -->
+        <!-- legal practice management Menu Structure -->
         
         <!-- Main Project Menu Override -->
         <record id="project.menu_main_pm" model="ir.ui.menu">
-            <field name="name">Legal Cases</field>
+            <field name="name">Cases &amp; Matters</field>
         </record>
         
         <record id="project.menu_projects" model="ir.ui.menu">
-            <field name="name">Legal Cases</field>
+            <field name="name">Cases &amp; Matters</field>
         </record>
         
-        <!-- Legal Case Management Sub-menus -->
+        <!-- legal practice management Sub-menus -->
         <record id="menu_legal_cases" model="ir.ui.menu">
-            <field name="name">Legal Cases</field>
+            <field name="name">Cases &amp; Matters</field>
             <field name="parent_id" ref="project.menu_main_pm"/>
             <field name="sequence">1</field>
         </record>
         
-        <!-- Legal Case Management Groups -->
+        <record id="menu_legal_matters" model="ir.ui.menu">
+            <field name="name">Legal Matters</field>
+            <field name="parent_id" ref="project.menu_main_pm"/>
+            <field name="sequence">2</field>
+        </record>
+        
+        <!-- legal practice management Groups -->
         <record id="group_legal_case_manager" model="res.groups">
             <field name="name">Legal Case Manager</field>
             <field name="category_id" ref="base.module_category_human_resources"/>
-            <field name="comment">Users who can manage legal cases.</field>
+            <field name="comment">Users who can manage legal cases and matters.</field>
         </record>
         
         <record id="group_legal_case_viewer" model="res.groups">
             <field name="name">Legal Case Viewer</field>
             <field name="category_id" ref="base.module_category_human_resources"/>
-            <field name="comment">Users who can view legal cases.</field>
-        </record>
-
-        <!-- Create the "Case" tag for project filtering -->
-        <record id="project_tag_case" model="project.tags">
-            <field name="name">Case</field>
-            <field name="color">5</field>
+            <field name="comment">Users who can view legal cases and matters.</field>
         </record>
     </data>
 </odoo> 

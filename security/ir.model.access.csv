@@ -1,3 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_crm_lead_client_fields_lcm,access.crm.lead.client.fields.lcm,model_crm_lead,base.group_user,1,1,1,1
 access_res_partner_client_fields_lcm,access.res.partner.client.fields.lcm,model_res_partner,base.group_user,1,1,1,1
+access_project_project_legal_case,access.project.project.legal.case,model_project_project,base.group_user,1,1,1,1

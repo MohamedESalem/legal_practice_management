@@ -34,19 +34,74 @@
         </field>
     </record>
 
-    <!-- Strict Cases Action -->
-    <record id="action_view_project_cases_strict" model="ir.actions.act_window">
-        <field name="name">(Stricted) All Cases</field>
+    
+    <!-- Actions for different entity types -->
+    <record id="action_view_legal_entities_all" model="ir.actions.act_window">
+        <field name="name">All Legal Entities</field>
         <field name="res_model">project.project</field>
         <field name="view_mode">kanban,list,form</field>
-        <field name="domain">[('tag_ids.name', '=', 'Case')]</field>
-        <field name="context">{'group_by': 'stage_id', 'create_from_cases': True}</field>
+        <field name="domain">[("tag_ids.name", "in", ["Case", "Matter"])]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first legal entity!
+            </p>
+            <p>
+                Create a new case or matter to start managing legal work.
+            </p>
+        </field>
     </record>
 
-    <!-- Add Strict Cases as a submenu -->
-    <menuitem id="menu_strict_cases"
-              name="All Cases"
+    <record id="action_view_legal_cases_all" model="ir.actions.act_window">
+        <field name="name">All Cases</field>
+        <field name="res_model">project.project</field>
+        <field name="view_mode">kanban,list,form</field>
+        <field name="domain">[("tag_ids.name", "=", "Case")]</field>
+        <field name="context">{'create_from_cases': True}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first case!
+            </p>
+            <p>
+                Create a new legal case to start managing court proceedings.
+            </p>
+        </field>
+    </record>
+
+    <record id="action_view_legal_matters_all" model="ir.actions.act_window">
+        <field name="name">All Matters</field>
+        <field name="res_model">project.project</field>
+        <field name="view_mode">kanban,list,form</field>
+        <field name="domain">[("tag_ids.name", "=", "Matter")]</field>
+        <field name="context">{'create_from_matters': True}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first matter!
+            </p>
+            <p>
+                Create a new matter to start managing legal work.
+            </p>
+        </field>
+    </record>
+
+    <!-- Legal Entities Menu -->
+    <menuitem id="menu_legal_entities"
+              name="All Legal Entities"
               parent="project.menu_main_pm"
-              action="legal_case_management.action_view_project_cases_strict"
+              action="legal_practice_management.action_view_legal_entities_all"
               sequence="0"/>
-s</odoo>
+
+    <!-- Cases Menu -->
+    <menuitem id="menu_cases"
+              name="Cases"
+              parent="project.menu_main_pm"
+              action="legal_practice_management.action_view_legal_cases_all"
+              sequence="0"/>
+
+    <!-- Matters Menu -->
+    <menuitem id="menu_matters"
+              name="Matters"
+              parent="project.menu_main_pm"
+              action="legal_practice_management.action_view_legal_matters_all"
+              sequence="0"/>
+</odoo>

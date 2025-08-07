@@ -1,13 +1,13 @@
-# Legal Case Management - Arabic Translation Implementation Summary
+# legal practice management - Arabic Translation Implementation Summary
 
 ## ✅ Implementation Complete
 
-The Arabic translation implementation for the Legal Case Management module has been successfully completed following Odoo's highest standards and best practices.
+The Arabic translation implementation for the legal practice management module has been successfully completed following Odoo's highest standards and best practices.
 
 ## 📁 Files Created/Modified
 
 ### New Files Created:
-1. `i18n/legal_case_management.pot` - Translation template with all translatable strings
+1. `i18n/legal_practice_management.pot` - Translation template with all translatable strings
 2. `i18n/ar.po` - Complete Arabic translation file
 3. `data/menu_data.xml` - Menu translation data file
 4. `TRANSLATION_README.md` - Comprehensive documentation
@@ -89,7 +89,7 @@ Arabic translation includes proper plural forms configuration for Arabic languag
 
 ### 1. Install the Module
 ```bash
-./odoo-bin -u legal_case_management -d your_database
+./odoo-bin -u legal_practice_management -d your_database
 ```
 
 ### 2. Enable Arabic Language
@@ -99,7 +99,7 @@ Arabic translation includes proper plural forms configuration for Arabic languag
 
 ### 3. Update Translations
 ```bash
-./odoo-bin -u legal_case_management -d your_database --i18n-overwrite
+./odoo-bin -u legal_practice_management -d your_database --i18n-overwrite
 ```
 
 ## 🧪 Testing
@@ -162,4 +162,4 @@ For questions or improvements:
 
 The Arabic translation implementation is complete and ready for production use. All translatable strings have been properly marked, comprehensive Arabic translations have been provided, and the implementation follows Odoo's highest standards and best practices.
 
-The module now provides a fully localized Arabic experience for legal case management, with professional legal terminology and proper Arabic grammar and context. 
+The module now provides a fully localized Arabic experience for legal practice management, with professional legal terminology and proper Arabic grammar and context. 

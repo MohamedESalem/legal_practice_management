@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
 """
-Legal Case Management Mixin
-Provides common functionality for legal case management.
+legal practice management Mixin
+Provides common functionality for legal practice management.
 """
 
 from odoo import models, fields, api, _
 
 class LegalCaseMixin(models.AbstractModel):
-    """Mixin class for legal case management functionality"""
+    """Mixin class for legal practice management functionality"""
     _name = 'legal.case.mixin'
-    _description = 'Legal Case Management Mixin'
+    _description = 'legal practice management Mixin'
 
     @api.model
     def get_app_menu_name(self):

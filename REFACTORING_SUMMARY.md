@@ -1,8 +1,8 @@
-# Legal Case Management - Refactoring Summary
+# legal practice management - Refactoring Summary
 
 ## 🎯 Refactoring Goals Achieved
 
-The Legal Case Management module has been successfully refactored to improve:
+The legal practice management module has been successfully refactored to improve:
 - **Code Organization**: Better structure and separation of concerns
 - **Maintainability**: Centralized constants and configuration
 - **Testability**: Comprehensive test suite
@@ -13,7 +13,7 @@ The Legal Case Management module has been successfully refactored to improve:
 
 ### Before Refactoring
 ```
-legal_case_management/
+legal_practice_management/
 ├── models/
 │   ├── project.py
 │   ├── res_partner.py
@@ -25,7 +25,7 @@ legal_case_management/
 
 ### After Refactoring
 ```
-legal_case_management/
+legal_practice_management/
 ├── config/
 │   └── settings.py              # Centralized configuration
 ├── data/
@@ -33,7 +33,7 @@ legal_case_management/
 ├── docs/
 │   └── DEVELOPMENT_GUIDE.md     # Development guide
 ├── i18n/
-│   ├── legal_case_management.pot # Translation template
+│   ├── legal_practice_management.pot # Translation template
 │   └── ar.po                    # Arabic translations
 ├── models/
 │   ├── constants.py             # Centralized constants
@@ -185,11 +185,11 @@ The refactored architecture makes it easy to add:
 
 ## ✅ Conclusion
 
-The refactoring has successfully transformed the Legal Case Management module into a:
+The refactoring has successfully transformed the legal practice management module into a:
 - **Professional-grade solution** with comprehensive Arabic support
 - **Maintainable codebase** with centralized constants and configuration
 - **Testable application** with comprehensive test coverage
 - **Well-documented system** with clear development guides
 - **Scalable architecture** ready for future enhancements
 
-The module now follows Odoo's highest standards and best practices, providing a solid foundation for legal case management with full Arabic support. 
+The module now follows Odoo's highest standards and best practices, providing a solid foundation for legal practice management with full Arabic support. 

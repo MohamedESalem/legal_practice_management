@@ -1,4 +1,4 @@
-# Legal Case Management
+# legal practice management
 
 Transform Odoo Projects into Cases & Matters for law firms with full Arabic support.
 
@@ -15,7 +15,7 @@ Transform Odoo Projects into Cases & Matters for law firms with full Arabic supp
 
 1. **Install the module**:
    ```bash
-   ./odoo-bin -u legal_case_management -d your_database
+   ./odoo-bin -u legal_practice_management -d your_database
    ```
 
 2. **Enable Arabic language**:
@@ -25,7 +25,7 @@ Transform Odoo Projects into Cases & Matters for law firms with full Arabic supp
 
 3. **Update translations**:
    ```bash
-   ./odoo-bin -u legal_case_management -d your_database --i18n-overwrite
+   ./odoo-bin -u legal_practice_management -d your_database --i18n-overwrite
    ```
 
 ## Documentation
@@ -38,7 +38,7 @@ Transform Odoo Projects into Cases & Matters for law firms with full Arabic supp
 
 Run the comprehensive test suite:
 ```bash
-cd addons/legal_case_management
+cd addons/legal_practice_management
 python tests/test_translations.py
 ```
 

@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Legal Case Management Configuration
+legal practice management Configuration
 Centralized configuration settings.
 """
 
 # Module configuration
-MODULE_NAME = 'legal_case_management'
+MODULE_NAME = 'legal_practice_management'
 MODULE_VERSION = '1.0'
 MODULE_AUTHOR = 'Mohamed Essam'
 MODULE_WEBSITE = 'https://essamsalem.com'

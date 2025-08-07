@@ -1,14 +1,14 @@
-# Legal Case Management - Development Guide
+# legal practice management - Development Guide
 
 ## Overview
 
-This guide provides comprehensive information for developing and maintaining the Legal Case Management module.
+This guide provides comprehensive information for developing and maintaining the legal practice management module.
 
 ## Architecture
 
 ### Module Structure
 ```
-legal_case_management/
+legal_practice_management/
 ├── config/
 │   └── settings.py              # Configuration settings
 ├── data/
@@ -16,7 +16,7 @@ legal_case_management/
 ├── docs/
 │   └── DEVELOPMENT_GUIDE.md     # This file
 ├── i18n/
-│   ├── legal_case_management.pot # Translation template
+│   ├── legal_practice_management.pot # Translation template
 │   └── ar.po                    # Arabic translations
 ├── models/
 │   ├── __init__.py
@@ -49,7 +49,7 @@ Centralized selection options and constants:
 - `CASE_TYPE_SELECTION`
 
 ### 2. Mixin (`models/legal_case_mixin.py`)
-Shared functionality for legal case management:
+Shared functionality for legal practice management:
 - `get_app_menu_name()` - Returns translated menu name
 - `get_legal_terminology()` - Returns legal terminology translations
 
@@ -80,7 +80,7 @@ new_field = fields.Selection(NEW_SELECTION, string=_('New Field'))
 
 3. **Update translation files**:
 ```bash
-./odoo-bin -u legal_case_management --i18n-export=addons/legal_case_management/i18n/legal_case_management.pot
+./odoo-bin -u legal_practice_management --i18n-export=addons/legal_practice_management/i18n/legal_practice_management.pot
 ```
 
 ### Adding New Views
@@ -94,19 +94,19 @@ new_field = fields.Selection(NEW_SELECTION, string=_('New Field'))
 1. **Mark strings** with `_()` function
 2. **Update POT file**:
 ```bash
-./odoo-bin -u legal_case_management --i18n-export=addons/legal_case_management/i18n/legal_case_management.pot
+./odoo-bin -u legal_practice_management --i18n-export=addons/legal_practice_management/i18n/legal_practice_management.pot
 ```
 3. **Add translations** to `ar.po` file
 4. **Compile translations**:
 ```bash
-./odoo-bin -u legal_case_management --i18n-overwrite
+./odoo-bin -u legal_practice_management --i18n-overwrite
 ```
 
 ## Testing
 
 ### Running Tests
 ```bash
-cd addons/legal_case_management
+cd addons/legal_practice_management
 python tests/test_translations.py
 ```
 

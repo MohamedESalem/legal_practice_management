@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* legal_case_management
+# 	* legal_practice_management
 #
 msgid ""
 msgstr ""
@@ -16,427 +16,462 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_project_project__office_file_number
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_project_project__office_file_number
 msgid "File Number in the Office"
 msgstr "رقم الملف في المكتب"
 
-#. module: legal_case_management
-#: model:ir.model.fields,help:legal_case_management.field_project_project__office_file_number
+#. module: legal_practice_management
+#: model:ir.model.fields,help:legal_practice_management.field_project_project__office_file_number
 msgid "Internal reference number used by the law firm"
 msgstr "الرقم المرجعي الداخلي المستخدم من قبل مكتب المحاماة"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_project_project__court_name
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_project_project__court_name
 msgid "Court Name"
 msgstr "اسم المحكمة"
 
-#. module: legal_case_management
-#: model:ir.model.fields,help:legal_case_management.field_project_project__court_name
+#. module: legal_practice_management
+#: model:ir.model.fields,help:legal_practice_management.field_project_project__court_name
 msgid "Court Name"
 msgstr "اسم المحكمة"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_project_project__court_circle
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_project_project__court_circle
 msgid "Court Circle"
 msgstr "دائرة المحكمة"
 
-#. module: legal_case_management
-#: model:ir.model.fields,help:legal_case_management.field_project_project__court_circle
+#. module: legal_practice_management
+#: model:ir.model.fields,help:legal_practice_management.field_project_project__court_circle
 msgid "Court circle"
 msgstr "دائرة المحكمة"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_project_project__lawsuit_filing_date
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_project_project__lawsuit_filing_date
 msgid "Case Filing Date"
 msgstr "تاريخ رفع الدعوى"
 
-#. module: legal_case_management
-#: model:ir.model.fields,help:legal_case_management.field_project_project__lawsuit_filing_date
+#. module: legal_practice_management
+#: model:ir.model.fields,help:legal_practice_management.field_project_project__lawsuit_filing_date
 msgid "The date on which the lawsuit was filed in court"
 msgstr "التاريخ الذي تم فيه رفع الدعوى في المحكمة"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_project_project__first_degree_case_number_year
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_project_project__first_degree_case_number_year
 msgid "First Degree Case Number"
 msgstr "رقم الدعوى في الدرجة الأولى"
 
-#. module: legal_case_management
-#: model:ir.model.fields,help:legal_case_management.field_project_project__first_degree_case_number_year
+#. module: legal_practice_management
+#: model:ir.model.fields,help:legal_practice_management.field_project_project__first_degree_case_number_year
 msgid "Number of the first degree case in court"
 msgstr "رقم الدعوى في الدرجة الأولى في المحكمة"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_project_project__second_degree_case_number_year
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_project_project__second_degree_case_number_year
 msgid "Second Degree Case Number"
 msgstr "رقم الدعوى في الدرجة الثانية"
 
-#. module: legal_case_management
-#: model:ir.model.fields,help:legal_case_management.field_project_project__second_degree_case_number_year
+#. module: legal_practice_management
+#: model:ir.model.fields,help:legal_practice_management.field_project_project__second_degree_case_number_year
 msgid "Number of the appeal or second degree case in court"
 msgstr "رقم الاستئناف أو الدعوى في الدرجة الثانية في المحكمة"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_project_project__client_status
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_project_project__client_status
 msgid "Client Status"
 msgstr "حالة العميل"
 
-#. module: legal_case_management
-#: model:ir.model.fields,help:legal_case_management.field_project_project__client_status
+#. module: legal_practice_management
+#: model:ir.model.fields,help:legal_practice_management.field_project_project__client_status
 msgid "The client's status in the case e.g(Plaintiff, Defendant, Third Party, etc.)"
 msgstr "حالة العميل في الدعوى مثل (المدعي، المدعى عليه، الطرف الثالث، إلخ)"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_project_project__opponent_status
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_project_project__opponent_status
 msgid "Opponent Status"
 msgstr "حالة الخصم"
 
-#. module: legal_case_management
-#: model:ir.model.fields,help:legal_case_management.field_project_project__opponent_status
+#. module: legal_practice_management
+#: model:ir.model.fields,help:legal_practice_management.field_project_project__opponent_status
 msgid "The opponent's status in the case e.g(Plaintiff, Defendant, Third Party, etc.)"
 msgstr "حالة الخصم في الدعوى مثل (المدعي، المدعى عليه، الطرف الثالث، إلخ)"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_project_project__opponent_name
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_project_project__opponent_name
 msgid "Opponent's Name"
 msgstr "اسم الخصم"
 
-#. module: legal_case_management
-#: model:ir.model.fields,help:legal_case_management.field_project_project__opponent_name
+#. module: legal_practice_management
+#: model:ir.model.fields,help:legal_practice_management.field_project_project__opponent_name
 msgid "Name of the opposing party"
 msgstr "اسم الطرف الخصم"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_project_project__opponent_address
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_project_project__opponent_address
 msgid "Opponent's Address"
 msgstr "عنوان الخصم"
 
-#. module: legal_case_management
-#: model:ir.model.fields,help:legal_case_management.field_project_project__opponent_address
+#. module: legal_practice_management
+#: model:ir.model.fields,help:legal_practice_management.field_project_project__opponent_address
 msgid "Address of the opposing party"
 msgstr "عنوان الطرف الخصم"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_project_project__opponent_phone
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_project_project__opponent_phone
 msgid "Opponent's Phone Number"
 msgstr "رقم هاتف الخصم"
 
-#. module: legal_case_management
-#: model:ir.model.fields,help:legal_case_management.field_project_project__opponent_phone
+#. module: legal_practice_management
+#: model:ir.model.fields,help:legal_practice_management.field_project_project__opponent_phone
 msgid "Contact number of the opposing party"
 msgstr "رقم الاتصال للطرف الخصم"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_project_project__opponent_attorney_name
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_project_project__opponent_attorney_name
 msgid "Opponent's Attorney's Name"
 msgstr "اسم محامي الخصم"
 
-#. module: legal_case_management
-#: model:ir.model.fields,help:legal_case_management.field_project_project__opponent_attorney_name
+#. module: legal_practice_management
+#: model:ir.model.fields,help:legal_practice_management.field_project_project__opponent_attorney_name
 msgid "Name of the opposing attorney"
 msgstr "اسم محامي الطرف الخصم"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_project_project__opponent_attorney_phone
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_project_project__opponent_attorney_phone
 msgid "Opponent's Attorney's Phone"
 msgstr "هاتف محامي الخصم"
 
-#. module: legal_case_management
-#: model:ir.model.fields,help:legal_case_management.field_project_project__opponent_attorney_phone
+#. module: legal_practice_management
+#: model:ir.model.fields,help:legal_practice_management.field_project_project__opponent_attorney_phone
 msgid "Contact number of the opposing attorney"
 msgstr "رقم الاتصال لمحامي الطرف الخصم"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_client_open_date
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_res_partner__x_client_open_date
 msgid "Client Open Date"
 msgstr "تاريخ فتح العميل"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_name_en
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_res_partner__x_name_en
 msgid "Name in English"
 msgstr "الاسم بالإنجليزية"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_nationality
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_res_partner__x_nationality
 msgid "Nationality"
 msgstr "الجنسية"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_residence_country
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_res_partner__x_residence_country
 msgid "Residence Country"
 msgstr "بلد الإقامة"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_national_id
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_res_partner__x_national_id
 msgid "National ID"
 msgstr "رقم الهوية الوطنية"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_passport_number
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_res_partner__x_passport_number
 msgid "Passport Number"
 msgstr "رقم جواز السفر"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_birth_date
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_res_partner__x_birth_date
 msgid "Birth Date"
 msgstr "تاريخ الميلاد"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_sex
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_res_partner__x_sex
 msgid "Sex"
 msgstr "الجنس"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_preferred_language
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_res_partner__x_preferred_language
 msgid "Preferred Language"
 msgstr "اللغة المفضلة"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_communication_preferences
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_res_partner__x_communication_preferences
 msgid "Communication Preferences"
 msgstr "تفضيلات التواصل"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_representative
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_res_partner__x_representative
 msgid "Representative"
 msgstr "الممثل"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_representative_title
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_res_partner__x_representative_title
 msgid "Representative Title"
 msgstr "لقب الممثل"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_entity_type
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_res_partner__x_entity_type
 msgid "Entity Type"
 msgstr "نوع الكيان"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_commercial_register_no
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_res_partner__x_commercial_register_no
 msgid "Commercial Register No."
 msgstr "رقم السجل التجاري"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_tax_registration_number
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_res_partner__x_tax_registration_number
 msgid "Tax Registration Number"
 msgstr "رقم التسجيل الضريبي"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_res_partner__x_company_activity
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_res_partner__x_company_activity
 msgid "Company Activity"
 msgstr "نشاط الشركة"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_client_open_date
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_crm_lead__x_client_open_date
 msgid "Client Open Date"
 msgstr "تاريخ فتح العميل"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_name_en
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_crm_lead__x_name_en
 msgid "Name in English"
 msgstr "الاسم بالإنجليزية"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_nationality
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_crm_lead__x_nationality
 msgid "Nationality"
 msgstr "الجنسية"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_residence_country
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_crm_lead__x_residence_country
 msgid "Residence Country"
 msgstr "بلد الإقامة"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_national_id
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_crm_lead__x_national_id
 msgid "National ID"
 msgstr "رقم الهوية الوطنية"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_passport_number
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_crm_lead__x_passport_number
 msgid "Passport Number"
 msgstr "رقم جواز السفر"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_birth_date
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_crm_lead__x_birth_date
 msgid "Birth Date"
 msgstr "تاريخ الميلاد"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_sex
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_crm_lead__x_sex
 msgid "Sex"
 msgstr "الجنس"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_preferred_language
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_crm_lead__x_preferred_language
 msgid "Preferred Language"
 msgstr "اللغة المفضلة"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_communication_preferences
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_crm_lead__x_communication_preferences
 msgid "Communication Preferences"
 msgstr "تفضيلات التواصل"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_representative
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_crm_lead__x_representative
 msgid "Representative"
 msgstr "الممثل"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_representative_title
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_crm_lead__x_representative_title
 msgid "Representative Title"
 msgstr "لقب الممثل"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_entity_type
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_crm_lead__x_entity_type
 msgid "Entity Type"
 msgstr "نوع الكيان"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_commercial_register_no
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_crm_lead__x_commercial_register_no
 msgid "Commercial Register No."
 msgstr "رقم السجل التجاري"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_tax_registration_number
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_crm_lead__x_tax_registration_number
 msgid "Tax Registration Number"
 msgstr "رقم التسجيل الضريبي"
 
-#. module: legal_case_management
-#: model:ir.model.fields,field_description:legal_case_management.field_crm_lead__x_company_activity
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_crm_lead__x_company_activity
 msgid "Company Activity"
 msgstr "نشاط الشركة"
 
-#. module: legal_case_management
-#: model:ir.model.fields.selection,name:legal_case_management.selection__res_partner__x_preferred_language__ar
-#: model:ir.model.fields.selection,name:legal_case_management.selection__crm_lead__x_preferred_language__ar
+#. module: legal_practice_management
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__res_partner__x_preferred_language__ar
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__crm_lead__x_preferred_language__ar
 msgid "Arabic"
 msgstr "العربية"
 
-#. module: legal_case_management
-#: model:ir.model.fields.selection,name:legal_case_management.selection__res_partner__x_preferred_language__en
-#: model:ir.model.fields.selection,name:legal_case_management.selection__crm_lead__x_preferred_language__en
+#. module: legal_practice_management
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__res_partner__x_preferred_language__en
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__crm_lead__x_preferred_language__en
 msgid "English"
 msgstr "الإنجليزية"
 
-#. module: legal_case_management
-#: model:ir.model.fields.selection,name:legal_case_management.selection__res_partner__x_preferred_language__fr
-#: model:ir.model.fields.selection,name:legal_case_management.selection__crm_lead__x_preferred_language__fr
+#. module: legal_practice_management
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__res_partner__x_preferred_language__fr
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__crm_lead__x_preferred_language__fr
 msgid "French"
 msgstr "الفرنسية"
 
-#. module: legal_case_management
-#: model:ir.model.fields.selection,name:legal_case_management.selection__res_partner__x_preferred_language__other
-#: model:ir.model.fields.selection,name:legal_case_management.selection__crm_lead__x_preferred_language__other
+#. module: legal_practice_management
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__res_partner__x_preferred_language__other
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__crm_lead__x_preferred_language__other
 msgid "Other"
 msgstr "أخرى"
 
-#. module: legal_case_management
-#: model:ir.model.fields.selection,name:legal_case_management.selection__res_partner__x_entity_type__llc
-#: model:ir.model.fields.selection,name:legal_case_management.selection__crm_lead__x_entity_type__llc
+#. module: legal_practice_management
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__res_partner__x_entity_type__llc
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__crm_lead__x_entity_type__llc
 msgid "LLC"
 msgstr "شركة ذات مسؤولية محدودة"
 
-#. module: legal_case_management
-#: model:ir.model.fields.selection,name:legal_case_management.selection__res_partner__x_entity_type__jsc
-#: model:ir.model.fields.selection,name:legal_case_management.selection__crm_lead__x_entity_type__jsc
+#. module: legal_practice_management
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__res_partner__x_entity_type__jsc
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__crm_lead__x_entity_type__jsc
 msgid "JSC"
 msgstr "شركة مساهمة"
 
-#. module: legal_case_management
-#: model:ir.model.fields.selection,name:legal_case_management.selection__res_partner__x_entity_type__partnership
-#: model:ir.model.fields.selection,name:legal_case_management.selection__crm_lead__x_entity_type__partnership
+#. module: legal_practice_management
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__res_partner__x_entity_type__partnership
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__crm_lead__x_entity_type__partnership
 msgid "Partnership"
 msgstr "شركة تضامن"
 
-#. module: legal_case_management
-#: model:ir.model.fields.selection,name:legal_case_management.selection__res_partner__x_entity_type__other
-#: model:ir.model.fields.selection,name:legal_case_management.selection__crm_lead__x_entity_type__other
+#. module: legal_practice_management
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__res_partner__x_entity_type__other
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__crm_lead__x_entity_type__other
 msgid "Other"
 msgstr "أخرى"
 
-#. module: legal_case_management
-#: model:ir.model.fields.selection,name:legal_case_management.selection__res_partner__x_sex__male
-#: model:ir.model.fields.selection,name:legal_case_management.selection__crm_lead__x_sex__male
+#. module: legal_practice_management
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__res_partner__x_sex__male
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__crm_lead__x_sex__male
 msgid "Male"
 msgstr "ذكر"
 
-#. module: legal_case_management
-#: model:ir.model.fields.selection,name:legal_case_management.selection__res_partner__x_sex__female
-#: model:ir.model.fields.selection,name:legal_case_management.selection__crm_lead__x_sex__female
+#. module: legal_practice_management
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__res_partner__x_sex__female
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__crm_lead__x_sex__female
 msgid "Female"
 msgstr "أنثى"
 
-#. module: legal_case_management
-#: model_terms:ir.ui.view,arch_db:legal_case_management.view_project_form_legal_case
+#. module: legal_practice_management
+#: model_terms:ir.ui.view,arch_db:legal_practice_management.view_project_form_legal_case
 msgid "Legal Case Details"
 msgstr "تفاصيل القضية القانونية"
 
-#. module: legal_case_management
-#: model_terms:ir.ui.view,arch_db:legal_case_management.view_project_form_legal_case
+#. module: legal_practice_management
+#: model_terms:ir.ui.view,arch_db:legal_practice_management.view_project_form_legal_case
 msgid "Case Identification"
 msgstr "تعريف القضية"
 
-#. module: legal_case_management
-#: model_terms:ir.ui.view,arch_db:legal_case_management.view_project_form_legal_case
+#. module: legal_practice_management
+#: model_terms:ir.ui.view,arch_db:legal_practice_management.view_project_form_legal_case
 msgid "Client Details"
 msgstr "تفاصيل العميل"
 
-#. module: legal_case_management
-#: model_terms:ir.ui.view,arch_db:legal_case_management.view_project_form_legal_case
+#. module: legal_practice_management
+#: model_terms:ir.ui.view,arch_db:legal_practice_management.view_project_form_legal_case
 msgid "Opponent Details"
 msgstr "تفاصيل الخصم"
 
-#. module: legal_case_management
+#. module: legal_practice_management
 #: model:ir.ui.menu,name:project.menu_main_pm
-msgid "Cases"
-msgstr "القضايا"
+msgid "Cases & Matters"
+msgstr "القضايا والمسائل"
 
-#. module: legal_case_management
+#. module: legal_practice_management
 #: model:ir.ui.menu,name:project.menu_projects
-msgid "Cases"
-msgstr "القضايا"
+msgid "Cases & Matters"
+msgstr "القضايا والمسائل"
 
-#. module: legal_case_management
-#: model:ir.ui.menu,name:legal_case_management.menu_legal_cases
-msgid "Cases"
-msgstr "القضايا"
+#. module: legal_practice_management
+#: model:ir.ui.menu,name:legal_practice_management.menu_legal_cases
+msgid "Cases & Matters"
+msgstr "القضايا والمسائل"
 
-#. module: legal_case_management
-#: model_terms:ir.ui.view,arch_db:legal_case_management.view_res_partner_form_client_fields_lcm
+#. module: legal_practice_management
+#: model:ir.ui.menu,name:legal_practice_management.menu_legal_matters
+msgid "Legal Matters"
+msgstr "المسائل القانونية"
+
+#. module: legal_practice_management
+#: model_terms:ir.ui.view,arch_db:legal_practice_management.view_res_partner_form_client_fields_lcm
 msgid "Client Information"
 msgstr "معلومات العميل"
 
-#. module: legal_case_management
-#: model_terms:ir.ui.view,arch_db:legal_case_management.view_res_partner_form_client_fields_lcm
+#. module: legal_practice_management
+#: model_terms:ir.ui.view,arch_db:legal_practice_management.view_res_partner_form_client_fields_lcm
 msgid "General"
 msgstr "عام"
 
-#. module: legal_case_management
-#: model_terms:ir.ui.view,arch_db:legal_case_management.view_res_partner_form_client_fields_lcm
+#. module: legal_practice_management
+#: model_terms:ir.ui.view,arch_db:legal_practice_management.view_res_partner_form_client_fields_lcm
 msgid "Personal (Individual)"
 msgstr "شخصي (فرد)"
 
-#. module: legal_case_management
-#: model_terms:ir.ui.view,arch_db:legal_case_management.view_res_partner_form_client_fields_lcm
+#. module: legal_practice_management
+#: model_terms:ir.ui.view,arch_db:legal_practice_management.view_res_partner_form_client_fields_lcm
 msgid "Company"
 msgstr "شركة"
 
-#. module: legal_case_management
-#: model_terms:ir.ui.view,arch_db:legal_case_management.view_crm_lead_form_client_fields_lcm
+#. module: legal_practice_management
+#: model_terms:ir.ui.view,arch_db:legal_practice_management.view_crm_lead_form_client_fields_lcm
 msgid "Client Information"
 msgstr "معلومات العميل"
 
-#. module: legal_case_management
-#: model_terms:ir.ui.view,arch_db:legal_case_management.view_crm_lead_form_client_fields_lcm
+#. module: legal_practice_management
+#: model_terms:ir.ui.view,arch_db:legal_practice_management.view_crm_lead_form_client_fields_lcm
 msgid "General"
 msgstr "عام"
 
-#. module: legal_case_management
-#: model_terms:ir.ui.view,arch_db:legal_case_management.view_crm_lead_form_client_fields_lcm
+#. module: legal_practice_management
+#: model_terms:ir.ui.view,arch_db:legal_practice_management.view_crm_lead_form_client_fields_lcm
 msgid "Personal (Individual)"
 msgstr "شخصي (فرد)"
 
-#. module: legal_case_management
-#: model_terms:ir.ui.view,arch_db:legal_case_management.view_crm_lead_form_client_fields_lcm
+#. module: legal_practice_management
+#: model_terms:ir.ui.view,arch_db:legal_practice_management.view_crm_lead_form_client_fields_lcm
 msgid "Company"
-msgstr "شركة" 
+msgstr "شركة"
+
+#. module: legal_practice_management
+#: model:ir.actions.act_window,name:legal_practice_management.action_view_legal_entities_all
+msgid "All Legal Entities"
+msgstr "جميع الكيانات القانونية"
+
+#. module: legal_practice_management
+#: model:ir.actions.act_window,name:legal_practice_management.action_view_legal_cases_all
+msgid "All Cases"
+msgstr "جميع القضايا"
+
+#. module: legal_practice_management
+#: model:ir.actions.act_window,name:legal_practice_management.action_view_legal_matters_all
+msgid "All Matters"
+msgstr "جميع المسائل"
+
+#. module: legal_practice_management
+#: model:ir.ui.menu,name:legal_practice_management.menu_legal_entities
+msgid "All Legal Entities"
+msgstr "جميع الكيانات القانونية"
+
+#. module: legal_practice_management
+#: model:ir.ui.menu,name:legal_practice_management.menu_cases
+msgid "Cases"
+msgstr "القضايا"
+
+#. module: legal_practice_management
+#: model:ir.ui.menu,name:legal_practice_management.menu_matters
+msgid "Matters"
+msgstr "المسائل" 

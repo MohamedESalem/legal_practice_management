@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Legal Case Management - CRM Lead Extensions
-Extends crm.lead with legal case management fields.
+legal practice management - CRM Lead Extensions
+Extends crm.lead with legal practice management fields.
 """
 
 from odoo import models, fields, _

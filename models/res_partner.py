@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Legal Case Management - Partner Extensions
-Extends res.partner with legal case management fields.
+legal practice management - Partner Extensions
+Extends res.partner with legal practice management fields.
 """
 
 from odoo import models, fields, _

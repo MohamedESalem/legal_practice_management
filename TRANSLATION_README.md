@@ -1,15 +1,15 @@
-# Legal Case Management - Arabic Translation Implementation
+# legal practice management - Arabic Translation Implementation
 
 ## Overview
 
-This document describes the complete Arabic translation implementation for the Legal Case Management module, following Odoo's highest standards and best practices.
+This document describes the complete Arabic translation implementation for the legal practice management module, following Odoo's highest standards and best practices.
 
 ## Translation Files Structure
 
 ```
-legal_case_management/
+legal_practice_management/
 ├── i18n/
-│   ├── legal_case_management.pot    # Translation template
+│   ├── legal_practice_management.pot    # Translation template
 │   └── ar.po                       # Arabic translation file
 ```
 
@@ -17,7 +17,7 @@ legal_case_management/
 
 ### 1. Translation Template (.pot file)
 
-The `legal_case_management.pot` file contains all translatable strings from the module, including:
+The `legal_practice_management.pot` file contains all translatable strings from the module, including:
 - Field labels and help text
 - Selection field options
 - View labels and group names
@@ -139,7 +139,7 @@ Arabic translation includes proper plural forms configuration:
 ### 1. Install the Module
 ```bash
 # Update the module list
-./odoo-bin -u legal_case_management -d your_database
+./odoo-bin -u legal_practice_management -d your_database
 ```
 
 ### 2. Enable Arabic Language
@@ -150,7 +150,7 @@ Arabic translation includes proper plural forms configuration:
 ### 3. Update Translations
 ```bash
 # Update translations for the module
-./odoo-bin -u legal_case_management -d your_database --i18n-overwrite
+./odoo-bin -u legal_practice_management -d your_database --i18n-overwrite
 ```
 
 ## Quality Assurance
@@ -172,13 +172,13 @@ Arabic translation includes proper plural forms configuration:
 ### Adding New Translations
 1. Add new strings with `_()` function in Python files
 2. Add string attributes in XML files
-3. Update the .pot file: `./odoo-bin -u legal_case_management --i18n-export=addons/legal_case_management/i18n/legal_case_management.pot`
+3. Update the .pot file: `./odoo-bin -u legal_practice_management --i18n-export=addons/legal_practice_management/i18n/legal_practice_management.pot`
 4. Update the .po file with new translations
-5. Compile translations: `./odoo-bin -u legal_case_management --i18n-overwrite`
+5. Compile translations: `./odoo-bin -u legal_practice_management --i18n-overwrite`
 
 ### Updating Existing Translations
 1. Modify the .po file with updated translations
-2. Compile translations: `./odoo-bin -u legal_case_management --i18n-overwrite`
+2. Compile translations: `./odoo-bin -u legal_practice_management --i18n-overwrite`
 3. Restart Odoo server
 
 ## Support

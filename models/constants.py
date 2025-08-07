@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Legal Case Management Constants
+legal practice management Constants
 Centralized constants and selection options.
 """
 

@@ -388,22 +388,22 @@ msgstr "تفاصيل الخصم"
 
 #. module: legal_practice_management
 #: model:ir.ui.menu,name:project.menu_main_pm
-msgid "Cases & Matters"
+msgid "Legal Practice Management"
 msgstr "القضايا والمسائل"
 
 #. module: legal_practice_management
 #: model:ir.ui.menu,name:project.menu_projects
-msgid "Cases & Matters"
+msgid "Legal Practice Management"
 msgstr "القضايا والمسائل"
 
 #. module: legal_practice_management
 #: model:ir.ui.menu,name:legal_practice_management.menu_legal_cases
-msgid "Cases & Matters"
-msgstr "القضايا والمسائل"
+msgid "Cases"
+msgstr "القضايا"
 
 #. module: legal_practice_management
 #: model:ir.ui.menu,name:legal_practice_management.menu_legal_matters
-msgid "Legal Matters"
+msgid "Matters"
 msgstr "المسائل القانونية"
 
 #. module: legal_practice_management

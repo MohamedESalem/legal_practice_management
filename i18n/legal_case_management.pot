@@ -387,22 +387,22 @@ msgstr ""
 
 #. module: legal_practice_management
 #: model:ir.ui.menu,name:project.menu_main_pm
-msgid "Cases & Matters"
+msgid "Legal Practice Management"
 msgstr ""
 
 #. module: legal_practice_management
 #: model:ir.ui.menu,name:project.menu_projects
-msgid "Cases & Matters"
+msgid "Legal Practice Management"
 msgstr ""
 
 #. module: legal_practice_management
 #: model:ir.ui.menu,name:legal_practice_management.menu_legal_cases
-msgid "Cases & Matters"
+msgid "Cases"
 msgstr ""
 
 #. module: legal_practice_management
 #: model:ir.ui.menu,name:legal_practice_management.menu_legal_matters
-msgid "Legal Matters"
+msgid "Matters"
 msgstr ""
 
 #. module: legal_practice_management

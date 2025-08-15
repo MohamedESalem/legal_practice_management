@@ -1,7 +1,7 @@
 {
     'name': 'legal practice management',
     'version': '1.0',
-    'summary': 'Transform Odoo Projects into Cases & Matters for law firms, with suitable legal fields in CRM client profiles.',
+    'summary': 'Transform Odoo Projects, CRM and Contacts into Legal Practice Management for law firms, with suitable legal fields in CRM client profiles.',
     'description': 'Customizes the Odoo Project app for legal case and matter management, and adds suitable legal fields in the client\'s CRM profile.',
     'author': 'Mohamed Essam',
     'website': 'https://essamsalem.com',

@@ -94,7 +94,7 @@ The `ar.po` file provides complete Arabic translations for all strings, includin
 | Client Details | تفاصيل العميل |
 | Opponent Details | تفاصيل الخصم |
 | Cases & Matters | القضايا والمسائل |
-| Legal Matters | المسائل القانونية |
+| Matters | المسائل القانونية |
 | Client Information | معلومات العميل |
 | General | عام |
 | Personal (Individual) | شخصي (فرد) |

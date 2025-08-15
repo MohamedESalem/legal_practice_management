@@ -15,7 +15,7 @@ The Legal Case Management module now automatically assigns tags to newly created
 The system automatically detects the source context when creating new projects:
 
 1. **Cases Context**: Projects created from the Legal Cases menu get the "Case" tag
-2. **Matters Context**: Projects created from the Legal Matters menu get the "Matter" tag
+2. **Matters Context**: Projects created from the Matters menu get the "Matter" tag
 3. **Other Contexts**: Projects created from other sources (like regular Projects) get no default tags
 
 ### Implementation Details
@@ -126,7 +126,7 @@ The feature includes comprehensive tests in `tests/test_project_tags.py` that ve
 5. Save the case
 
 #### Creating Matters
-1. Navigate to **Legal Matters** → **All Matters**
+1. Navigate to  **Matters** → **All Matters**
 2. Click **Create** to add a new matter
 3. The "Matter" tag will automatically appear as selected
 4. Add any additional tags as needed

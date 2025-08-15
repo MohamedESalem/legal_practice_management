@@ -3,24 +3,26 @@
     <data noupdate="1">
         <!-- legal practice management Menu Structure -->
         
-        <!-- Main Project Menu Override -->
+        <!-- Main Project Menu name Override -->
         <record id="project.menu_main_pm" model="ir.ui.menu">
-            <field name="name">Cases &amp; Matters</field>
+            <field name="name">Legal Practice Management</field>
         </record>
-        
+
+        <!-- Projects Sub-menu name Override -->
         <record id="project.menu_projects" model="ir.ui.menu">
-            <field name="name">Cases &amp; Matters</field>
+            <field name="name">All Projects</field>
         </record>
-        
-        <!-- legal practice management Sub-menus -->
+
+        <!-- Add Sub-menu for Cases -->
         <record id="menu_legal_cases" model="ir.ui.menu">
-            <field name="name">Cases &amp; Matters</field>
+            <field name="name">Cases</field>
             <field name="parent_id" ref="project.menu_main_pm"/>
             <field name="sequence">1</field>
         </record>
         
+        <!-- Add Sub-menu for Matters -->
         <record id="menu_legal_matters" model="ir.ui.menu">
-            <field name="name">Legal Matters</field>
+            <field name="name">Matters</field>
             <field name="parent_id" ref="project.menu_main_pm"/>
             <field name="sequence">2</field>
         </record>
@@ -36,6 +38,18 @@
             <field name="name">Legal Case Viewer</field>
             <field name="category_id" ref="base.module_category_human_resources"/>
             <field name="comment">Users who can view legal cases and matters.</field>
+        </record>
+
+        <!-- Create the "Case" tag for project filtering -->
+        <record id="project_tag_case" model="project.tags">
+            <field name="name">Case</field>
+            <field name="color">5</field>
+        </record>
+        
+        <!-- Create the "Matter" tag for project filtering -->
+        <record id="project_tag_matter" model="project.tags">
+            <field name="name">Matter</field>
+            <field name="color">8</field>
         </record>
     </data>
 </odoo> 

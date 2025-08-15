@@ -34,7 +34,7 @@
         </field>
     </record>
 
-    
+
     <!-- Actions for different entity types -->
     <record id="action_view_legal_entities_all" model="ir.actions.act_window">
         <field name="name">All Legal Entities</field>
@@ -86,22 +86,22 @@
 
     <!-- Legal Entities Menu -->
     <menuitem id="menu_legal_entities"
-              name="All Legal Entities"
-              parent="project.menu_main_pm"
-              action="legal_practice_management.action_view_legal_entities_all"
-              sequence="0"/>
+        name="All Legal Entities"
+        parent="project.menu_main_pm"
+        action="legal_practice_management.action_view_legal_entities_all"
+        sequence="0" />
 
     <!-- Cases Menu -->
     <menuitem id="menu_cases"
-              name="Cases"
-              parent="project.menu_main_pm"
-              action="legal_practice_management.action_view_legal_cases_all"
-              sequence="0"/>
+        name="Cases"
+        parent="project.menu_main_pm"
+        action="legal_practice_management.action_view_legal_cases_all"
+        sequence="0" />
 
     <!-- Matters Menu -->
     <menuitem id="menu_matters"
-              name="Matters"
-              parent="project.menu_main_pm"
-              action="legal_practice_management.action_view_legal_matters_all"
-              sequence="0"/>
+        name="Matters"
+        parent="project.menu_main_pm"
+        action="legal_practice_management.action_view_legal_matters_all"
+        sequence="0" />
 </odoo>

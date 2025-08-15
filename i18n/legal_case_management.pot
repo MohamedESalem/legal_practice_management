@@ -392,7 +392,7 @@ msgstr ""
 
 #. module: legal_practice_management
 #: model:ir.ui.menu,name:project.menu_projects
-msgid "Legal Practice Management"
+msgid "All Projects"
 msgstr ""
 
 #. module: legal_practice_management

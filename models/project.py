@@ -1,4 +1,6 @@
+
 from odoo import models, fields, api, _
+from odoo.exceptions import ValidationError
 
 class ProjectProject(models.Model):
     _inherit = 'project.project'
@@ -57,3 +59,80 @@ class ProjectProject(models.Model):
         string=_("Opponent's Attorney's Phone"),
         help=_("Contact number of the opposing attorney")
     ) 
+
+    # ==================== TAG MANAGEMENT ====================
+    
+    def _get_context_tag(self):
+        """
+        Determine which tag to add based on the current context.
+        
+        Returns:
+            project.tags record or None: The appropriate tag based on context
+        """
+        if self.env.context.get('create_from_cases'):
+            return self.env.ref('legal_practice_management.project_tag_case', raise_if_not_found=False)
+        if self.env.context.get('create_from_matters'):
+            return self.env.ref('legal_practice_management.project_tag_matter', raise_if_not_found=False)
+        return None
+    
+    def _default_tag_ids(self):
+        """
+        Default method to add appropriate tag based on context.
+        
+        Returns:
+            list: List of tag commands for the tag_ids field
+        """
+        tag = self._get_context_tag()
+        if tag:
+            return [(4, tag.id)]
+        return []
+    
+    tag_ids = fields.Many2many(
+        'project.tags',
+        string='Tags',
+        default=_default_tag_ids,
+        help='Tags for categorizing legal entities'
+    )
+    
+    # ==================== OVERRIDE METHODS ====================
+    
+    @api.model
+    def create(self, vals):
+        """
+        Override create method to automatically add appropriate tag based on context.
+        
+        Args:
+            vals (dict): Values for creating the record
+            
+        Returns:
+            project.project: Created record
+        """
+        # Get the appropriate tag based on context
+        tag = self._get_context_tag()
+        
+        if tag:
+            # Initialize tag_ids if not present
+            if 'tag_ids' not in vals:
+                vals['tag_ids'] = []
+            
+            # Add the tag if it's not already in the list
+            if isinstance(vals['tag_ids'], list):
+                # Handle list of commands format
+                tag_ids = vals['tag_ids']
+                tag_id = tag.id
+                
+                # Check if tag is already in the list
+                tag_exists = any(
+                    isinstance(cmd, tuple) and len(cmd) >= 2 and cmd[1] == tag_id
+                    for cmd in tag_ids
+                )
+                
+                if not tag_exists:
+                    vals['tag_ids'].append((4, tag_id))
+            else:
+                # Handle direct list of IDs format
+                if isinstance(vals['tag_ids'], (list, tuple)):
+                    if tag.id not in vals['tag_ids']:
+                        vals['tag_ids'].append(tag.id)
+        
+        return super().create(vals)

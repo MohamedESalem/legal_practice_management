@@ -10,7 +10,18 @@
                 <page string="Legal Case Details">
                     <group>
                         <group string="Case Identification">
-                            <field name="office_file_number" />
+                            <field name="office_file_number" 
+                                   class="o_xxs_form_view"
+                                   readonly="is_file_number_locked"/>
+                            <div class="o_row">
+                                <button name="action_get_next_office_file_number" 
+                                        type="object" 
+                                        class="oe_inline btn-info" 
+                                        string="Get Next Number"
+                                        invisible="office_file_number or is_file_number_locked"
+                                        context="{'tracking_disable': True}"
+                                        groups="base.group_user"/>
+                            </div>
                             <field name="court_name" />
                             <field name="court_circle" />
                             <field name="lawsuit_filing_date" />

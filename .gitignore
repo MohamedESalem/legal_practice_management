@@ -1,8 +1,5 @@
-# Ignore root-level __manifest__.py
-/__manifest__.py
+# Ignore all files inside views/__pycache__/
+/__pycache__/*
 
 # Ignore all files inside models/__pycache__/
 models/__pycache__/*
-
-# Ignore all files inside views/__pycache__/
-/__pycache__/*

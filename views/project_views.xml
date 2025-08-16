@@ -41,7 +41,8 @@
         <field name="res_model">project.project</field>
         <field name="view_mode">kanban,list,form</field>
         <field name="domain">[("tag_ids.name", "in", ["Case", "Matter"])]</field>
-        <field name="context">{}</field>
+        <!-- <field name="context">{}</field> -->
+        <field name="context">{'group_by': 'stage_id'}</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Create your first legal entity!
@@ -57,7 +58,8 @@
         <field name="res_model">project.project</field>
         <field name="view_mode">kanban,list,form</field>
         <field name="domain">[("tag_ids.name", "=", "Case")]</field>
-        <field name="context">{'create_from_cases': True}</field>
+        <!-- <field name="context">{'create_from_cases': True}</field> -->
+        <field name="context">{'group_by': 'stage_id', 'create_from_cases': True}</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Create your first case!
@@ -73,7 +75,8 @@
         <field name="res_model">project.project</field>
         <field name="view_mode">kanban,list,form</field>
         <field name="domain">[("tag_ids.name", "=", "Matter")]</field>
-        <field name="context">{'create_from_matters': True}</field>
+        <!-- <field name="context">{'create_from_matters': True}</field> -->
+        <field name="context">{'group_by': 'stage_id', 'create_from_matters': True}</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Create your first matter!

@@ -28,4 +28,10 @@
     'auto_install': False,
     'application': True,
     'sequence': 0,
+    
+    # Use post_init_hook to run code automatically *after* installation is complete.
+    # Here we call a function that ensures 'sale_project' is uninstalled,
+    # because that module introduces unwanted links between Sales and Projects
+    # which conflict with the Legal Practice Management logic.
+    'post_init_hook': 'post_init_hook'
 }

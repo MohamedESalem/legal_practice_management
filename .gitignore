@@ -2,4 +2,4 @@
 /__pycache__/*
 
 # Ignore all files inside models/__pycache__/
-models/__pycache__/*
+/models/__pycache__/*

@@ -8,6 +8,10 @@ class ProjectProject(models.Model):
     _inherit = 'project.project'
     _description = 'Legal Case Project'
 
+    # ========== Field Overrides ==========
+    partner_id = fields.Many2one(required=True)
+    allow_billable = fields.Boolean(default=True)
+
     # ========== ORM Overrides ==========
     def write(self, vals):
         """Override write to handle file number locking."""

@@ -9,7 +9,7 @@ class ProjectProject(models.Model):
     _description = 'Legal Case Project'
 
     # ========== Field Overrides ==========
-    partner_id = fields.Many2one(required=True)
+    partner_id = fields.Many2one(required=False)
     allow_billable = fields.Boolean(default=True)
 
     # ========== ORM Overrides ==========
@@ -27,6 +27,16 @@ class ProjectProject(models.Model):
         return super().write(vals)
     
     # ========== Field Definitions ==========
+    matter_type = fields.Selection(
+        [
+            ('case', 'Legal Case'),
+            ('subject', 'Legal Subject')
+        ],
+        required=True,
+        default='subject',
+        tracking=True
+    )
+    
     office_file_number = fields.Integer(
         string=_("File Number in the Office"),
         # required=True,
@@ -354,10 +364,56 @@ class ProjectProject(models.Model):
     
     # ==================== OVERRIDE METHODS ====================
     
+    def _apply_template_based_on_matter_type(self):
+        """Apply template configuration based on matter type after project creation.
+        
+        This method is called after project creation to copy stages and tasks from the appropriate
+        template if configured by the administrator.
+        """
+        for record in self:
+            template_id = False
+            
+            if record.matter_type == 'case':
+                template_id = self.env['ir.config_parameter'].sudo().get_param(
+                    'legal_practice_management.litigation_template_id'
+                )
+            elif record.matter_type == 'subject':
+                template_id = self.env['ir.config_parameter'].sudo().get_param(
+                    'legal_practice_management.advisory_template_id'
+                )
+            
+            if template_id:
+                try:
+                    template = self.browse(int(template_id))
+                    if template and template.exists():
+                        # Copy stages from template and create mapping
+                        stage_mapping = {}
+                        for stage in template.type_ids:
+                            new_stage = stage.copy({'project_ids': [(4, record.id)]})
+                            stage_mapping[stage.id] = new_stage.id
+                        
+                        # Copy tasks from template, updating project and stage
+                        for task in template.task_ids:
+                            new_stage_id = stage_mapping.get(task.stage_id.id, task.stage_id.id)
+                            task.copy({
+                                'project_id': record.id,
+                                'stage_id': new_stage_id,
+                            })
+                        
+                        _logger.info(
+                            "Applied template %s to project %s (matter_type: %s) - copied %d stages and %d tasks",
+                            template.name, record.name, record.matter_type, len(stage_mapping), len(template.task_ids)
+                        )
+                except (ValueError, TypeError) as e:
+                    _logger.warning(
+                        "Failed to apply template for project %s: %s",
+                        record.name, str(e)
+                    )
+    
     @api.model_create_multi
     def create(self, vals_list):
         """
-        Override create method to handle file number locking and tag management.
+        Override create method to handle file number locking, tag management, and template loading.
         
         Args:
             vals_list (list): List of values for creating records
@@ -369,6 +425,12 @@ class ProjectProject(models.Model):
             # Handle file number locking
             if 'office_file_number' in vals and vals.get('office_file_number'):
                 vals['is_file_number_locked'] = True
+            
+            # Set matter_type based on context for backward compatibility
+            if self.env.context.get('create_from_cases'):
+                vals['matter_type'] = 'case'
+            elif self.env.context.get('create_from_matters'):
+                vals['matter_type'] = 'subject'
             
             # Handle tag assignment based on context
             tag = self._get_context_tag()
@@ -397,4 +459,10 @@ class ProjectProject(models.Model):
                         if tag.id not in vals['tag_ids']:
                             vals['tag_ids'].append(tag.id)
         
-        return super().create(vals_list)
+        # Create the projects
+        records = super().create(vals_list)
+        
+        # Apply template-based stage copying after creation
+        records._apply_template_based_on_matter_type()
+        
+        return records

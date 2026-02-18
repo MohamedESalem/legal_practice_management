@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Settings View for Template Configuration -->
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.legal_practice_management</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <div class="app_settings_block" string="Legal Practice Management Templates"
+                    data-key="legal_practice_management_templates">
+
+                    <h2>
+                        <span searchabletext="Legal Practice Management Templates">Legal Practice
+                            Management Templates</span>
+                    </h2>
+
+                    <div class="col-12 col-lg-6 o_setting_box m-5" id="legal_template_settings">
+                        <div class="o_setting_left_pane" style="width: 40%;">
+                            <div class="d-flex align-items-center">
+                                <span class="fa fa-gavel fa-2x text-primary"
+                                    style="margin-right: 10px;"></span>
+                                <field name="litigation_template_id"
+                                    placeholder="Select litigation template..." style="flex: 1;" />
+                            </div>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="litigation_template_id" string="Litigation Template" />
+                            <br></br>
+                            <br></br>
+                            <div class="text-muted">
+                                Choose a project template that will be automatically applied when
+                                creating Legal Cases.
+                                This template should include stages specific to litigation
+                                workflows.
+                            </div>
+                            <div class="mt-2">
+                                <em>Recommended: Create a template with stages like "Filing",
+                                    "Discovery", "Trial", "Appeal"</em>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-lg-6 o_setting_box m-5" id="advisory_template_settings">
+                        <div class="o_setting_left_pane" style="width: 40%;">
+                            <div class="d-flex align-items-center">
+                                <span class="fa fa-balance-scale fa-2x text-success"
+                                    style="margin-right: 10px;"></span>
+                                <field name="advisory_template_id"
+                                    placeholder="Select Subjects template..." style="flex: 1;" />
+                            </div>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="advisory_template_id" string="Subjects Template" />
+                            <br></br>
+                            <br></br>
+                            <div class="text-muted">
+                                Choose a project template that will be automatically applied when
+                                creating Legal subjects (matters).
+                                This template should include stages specific to
+                                subjects/non-litigation
+                                workflows.
+                            </div>
+                            <div class="mt-2">
+                                <em>Recommended: Create a template with stages like "Initial
+                                    Consultation", "Research", "Drafting", "Review"</em>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

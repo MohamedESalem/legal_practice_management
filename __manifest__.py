@@ -14,6 +14,7 @@
         'views/project_views.xml',
         'views/crm_client_fields_view.xml',
         'views/res_partner_view.xml',
+        'views/res_config_settings_view.xml',
     ],
     'installable': True,
     'application': True,

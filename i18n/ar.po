@@ -87,6 +87,18 @@ msgid "The client's status in the case e.g(Plaintiff, Defendant, Third Party, et
 msgstr "حالة العميل في الدعوى مثل (المدعي، المدعى عليه، الطرف الثالث، إلخ)"
 
 #. module: legal_practice_management
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__project_project__client_status__plaintiff
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__project_project__opponent_status__plaintiff
+msgid "Plaintiff"
+msgstr "المدعي"
+
+#. module: legal_practice_management
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__project_project__client_status__defendant
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__project_project__opponent_status__defendant
+msgid "Defendant"
+msgstr "المدعى عليه"
+
+#. module: legal_practice_management
 #: model:ir.model.fields,field_description:legal_practice_management.field_project_project__opponent_status
 msgid "Opponent Status"
 msgstr "حالة الخصم"

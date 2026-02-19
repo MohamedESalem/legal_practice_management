@@ -46,6 +46,20 @@
         </field>
     </record>
 
+    <!-- Disable quick create for project Kanban view -->
+    <record id="view_project_kanban_disable_quick_create" model="ir.ui.view">
+        <field name="name">project.project.kanban.disable.quick.create</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project_kanban" />
+        <field name="priority">1000</field>
+        <field name="arch" type="xml">
+            <xpath expr="//kanban" position="attributes">
+                <attribute name="quick_create">false</attribute>
+                <attribute name="on_create"></attribute>
+            </xpath>
+        </field>
+    </record>
+
 
     <!-- Actions for different entity types -->
     <record id="action_view_legal_entities_all" model="ir.actions.act_window">

@@ -276,6 +276,19 @@ class ProjectProject(models.Model):
             _logger.error("Error getting max file number excluding record: %s", str(e), exc_info=True)
             return 0
 
+    @api.constrains('partner_id', 'is_template', 'matter_type')
+    def _check_partner_required_for_non_template(self):
+        """Ensure partner_id is required only for real legal entities (not templates)."""
+        for record in self:
+            if (
+                not record.is_template
+                and record.matter_type in ['case', 'subject']
+                and not record.partner_id
+            ):
+                raise ValidationError(_(
+                    "Customer is required for legal entities."
+                ))
+
     @api.model
     def generate_missing_file_numbers(self):
         """Administrative method to generate file numbers for records that don't have them.

@@ -6,6 +6,10 @@
         <field name="model">project.project</field>
         <field name="inherit_id" ref="project.edit_project" />
         <field name="arch" type="xml">
+            <xpath expr="//header//field[@name='stage_id']" position="attributes">
+                <attribute name="domain">[('pipeline_type', '=', pipeline_type), '|', ('company_id', '=', False), ('company_id', '=?', company_id)]</attribute>
+                <attribute name="context">{'pipeline_board_type': pipeline_type, 'default_pipeline_type': pipeline_type}</attribute>
+            </xpath>
             <xpath expr="//page[@name='description']" position="before">
                 <page string="Legal Case Details">
                     <group>
@@ -68,7 +72,7 @@
         <field name="name">All Legal Entities</field>
         <field name="res_model">project.project</field>
         <field name="view_mode">kanban,list,form</field>
-        <field name="domain">[("pipeline_type", "in", ["litigation", "legal_subject"])]</field>
+        <field name="domain">[("pipeline_type", "in", ["litigation", "legal_subject"]), ("is_template", "=", False)]</field>
         <!-- <field name="context">{}</field> -->
         <!-- Hide create button in legal entity kanban view -->
         <field name="context">{'group_by': 'stage_id', 'create': False}</field>
@@ -86,7 +90,7 @@
         <field name="name">Litigation Cases</field>
         <field name="res_model">project.project</field>
         <field name="view_mode">kanban,list,form</field>
-        <field name="domain">[("pipeline_type", "=", "litigation")]</field>
+        <field name="domain">[("pipeline_type", "=", "litigation"), ("is_template", "=", False)]</field>
         <field name="context">{'group_by': 'stage_id', 'create_from_cases': True, 'pipeline_board_type': 'litigation', 'default_pipeline_type': 'litigation', 'default_matter_type': 'case'}</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
@@ -102,7 +106,7 @@
         <field name="name">Legal Subjects</field>
         <field name="res_model">project.project</field>
         <field name="view_mode">kanban,list,form</field>
-        <field name="domain">[("pipeline_type", "=", "legal_subject")]</field>
+        <field name="domain">[("pipeline_type", "=", "legal_subject"), ("is_template", "=", False)]</field>
         <field name="context">{'group_by': 'stage_id', 'create_from_matters': True, 'pipeline_board_type': 'legal_subject', 'default_pipeline_type': 'legal_subject', 'default_matter_type': 'subject'}</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">

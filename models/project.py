@@ -19,6 +19,14 @@ class ProjectProject(models.Model):
     allow_billable = fields.Boolean(default=True)
 
     # ========== ORM Overrides ==========
+    def _register_hook(self):
+        """Keep legacy XML ID while exposing the updated label 'Subject'."""
+        res = super()._register_hook()
+        tag = self.env.ref('legal_practice_management.project_tag_matter', raise_if_not_found=False)
+        if tag and tag.name != 'Subject':
+            tag.sudo().write({'name': 'Subject'})
+        return res
+
     @api.model
     def _get_context_pipeline_type(self):
         """Get the pipeline type from context in a backward-compatible way."""
@@ -92,6 +100,36 @@ class ProjectProject(models.Model):
             self.env.context.get('pipeline_board_type')
             or self.env.context.get('default_pipeline_type')
         )
+
+        if not pipeline_type and len(self) == 1 and self.pipeline_type in dict(PIPELINE_TYPE_SELECTION):
+            pipeline_type = self.pipeline_type
+
+        if not pipeline_type:
+            active_project_id = False
+            if self.env.context.get('active_model') == 'project.project':
+                active_project_id = self.env.context.get('active_id')
+            active_project_id = active_project_id or self.env.context.get('default_project_id')
+            if active_project_id:
+                project = self.browse(active_project_id).exists()
+                if project and project.pipeline_type in dict(PIPELINE_TYPE_SELECTION):
+                    pipeline_type = project.pipeline_type
+
+        if not pipeline_type and domain:
+            for condition in domain:
+                if not isinstance(condition, (list, tuple)) or len(condition) < 3:
+                    continue
+                field_name, operator, value = condition[0], condition[1], condition[2]
+                if field_name != 'pipeline_type':
+                    continue
+                if operator == '=' and value in dict(PIPELINE_TYPE_SELECTION):
+                    pipeline_type = value
+                    break
+                if operator == 'in' and isinstance(value, (list, tuple)):
+                    valid_values = [item for item in value if item in dict(PIPELINE_TYPE_SELECTION)]
+                    if len(valid_values) == 1:
+                        pipeline_type = valid_values[0]
+                        break
+
         if groups._name == 'project.project.stage' and pipeline_type in dict(PIPELINE_TYPE_SELECTION):
             allowed_company_ids = self.env.context.get('allowed_company_ids') or [self.env.company.id]
             stage_domain = [

@@ -48,7 +48,7 @@
         
         <!-- Create the "Matter" tag for project filtering -->
         <record id="project_tag_matter" model="project.tags">
-            <field name="name">Matter</field>
+            <field name="name">Subject</field>
             <field name="color">8</field>
         </record>
     </data>

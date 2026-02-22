@@ -140,6 +140,11 @@
         </field>
     </record>
 
+    <!-- Hiding Project Menu button "as it is already in configuration slide menu" -->
+    <record id="project.menu_projects_group_stage" model="ir.ui.menu">
+        <field name="active" eval="False" />
+    </record>
+
     <!-- Legal Entities Menu -->
     <menuitem id="menu_legal_entities"
         name="All Legal Entities"

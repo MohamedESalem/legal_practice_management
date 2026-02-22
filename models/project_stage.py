@@ -16,7 +16,10 @@ class ProjectProjectStage(models.Model):
 
     @api.model
     def _default_pipeline_type(self):
-        pipeline_type = self.env.context.get('default_pipeline_type')
+        pipeline_type = (
+            self.env.context.get('pipeline_board_type')
+            or self.env.context.get('default_pipeline_type')
+        )
         allowed_values = dict(PIPELINE_TYPE_SELECTION)
         if pipeline_type in allowed_values:
             return pipeline_type
@@ -28,7 +31,10 @@ class ProjectProjectStage(models.Model):
 
     @api.model
     def _read_group_expand_full(self, groups, domain):
-        pipeline_type = self.env.context.get('default_pipeline_type')
+        pipeline_type = (
+            self.env.context.get('pipeline_board_type')
+            or self.env.context.get('default_pipeline_type')
+        )
         if pipeline_type in dict(PIPELINE_TYPE_SELECTION):
             return groups.search([('pipeline_type', '=', pipeline_type)])
         return super()._read_group_expand_full(groups, domain)

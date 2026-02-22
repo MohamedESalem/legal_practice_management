@@ -22,7 +22,10 @@ class ProjectProject(models.Model):
     @api.model
     def _get_context_pipeline_type(self):
         """Get the pipeline type from context in a backward-compatible way."""
-        pipeline_type = self.env.context.get('default_pipeline_type')
+        pipeline_type = (
+            self.env.context.get('pipeline_board_type')
+            or self.env.context.get('default_pipeline_type')
+        )
         if pipeline_type in dict(PIPELINE_TYPE_SELECTION):
             return pipeline_type
         if self.env.context.get('create_from_cases'):
@@ -85,7 +88,10 @@ class ProjectProject(models.Model):
     @api.model
     def _read_group_expand_full(self, groups, domain):
         """Filter stage columns by pipeline in pipeline-specific Kanban actions."""
-        pipeline_type = self.env.context.get('default_pipeline_type')
+        pipeline_type = (
+            self.env.context.get('pipeline_board_type')
+            or self.env.context.get('default_pipeline_type')
+        )
         if groups._name == 'project.project.stage' and pipeline_type in dict(PIPELINE_TYPE_SELECTION):
             allowed_company_ids = self.env.context.get('allowed_company_ids') or [self.env.company.id]
             stage_domain = [

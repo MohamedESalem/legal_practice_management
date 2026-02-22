@@ -87,7 +87,7 @@
         <field name="res_model">project.project</field>
         <field name="view_mode">kanban,list,form</field>
         <field name="domain">[("pipeline_type", "=", "litigation")]</field>
-        <field name="context">{'group_by': 'stage_id', 'create_from_cases': True, 'default_pipeline_type': 'litigation', 'default_matter_type': 'case'}</field>
+        <field name="context">{'group_by': 'stage_id', 'create_from_cases': True, 'pipeline_board_type': 'litigation', 'default_pipeline_type': 'litigation', 'default_matter_type': 'case'}</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Create your first case!
@@ -103,7 +103,7 @@
         <field name="res_model">project.project</field>
         <field name="view_mode">kanban,list,form</field>
         <field name="domain">[("pipeline_type", "=", "legal_subject")]</field>
-        <field name="context">{'group_by': 'stage_id', 'create_from_matters': True, 'default_pipeline_type': 'legal_subject', 'default_matter_type': 'subject'}</field>
+        <field name="context">{'group_by': 'stage_id', 'create_from_matters': True, 'pipeline_board_type': 'legal_subject', 'default_pipeline_type': 'legal_subject', 'default_matter_type': 'subject'}</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Create your first matter!

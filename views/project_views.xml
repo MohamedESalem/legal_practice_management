@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <!-- Force module metadata used in Settings app list -->
+    <record id="base.module_project" model="ir.module.module">
+        <field name="shortdesc">Legal Practice Management</field>
+        <field name="summary">Legal practice management for litigation cases and legal subjects.</field>
+        <field name="icon">/legal_practice_management/static/description/icon.png</field>
+    </record>
+
+    <!-- Force app switcher label/icon on each module upgrade -->
+    <record id="project.menu_main_pm" model="ir.ui.menu">
+        <field name="name">Legal Practice Management</field>
+        <field name="web_icon">legal_practice_management,static/description/icon.png</field>
+    </record>
+
     <!-- Inherit the project.project form view to add legal case fields -->
     <record id="view_project_form_legal_case" model="ir.ui.view">
         <field name="name">project.project.form.legal.case</field>

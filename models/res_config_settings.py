@@ -14,7 +14,7 @@ class ResConfigSettings(models.TransientModel):
     litigation_template_id = fields.Many2one(
         'project.project',
         string='Litigation Template',
-        domain=[('is_template', '=', True)],
+        domain=[('is_template', '=', True), ('pipeline_type', '=', 'litigation')],
         config_parameter='legal_practice_management.litigation_template_id',
         help='Template to use when creating Legal Cases (litigation matters)'
     )
@@ -22,7 +22,7 @@ class ResConfigSettings(models.TransientModel):
     advisory_template_id = fields.Many2one(
         'project.project',
         string='Advisory Template',
-        domain=[('is_template', '=', True)],
+        domain=[('is_template', '=', True), ('pipeline_type', '=', 'legal_subject')],
         config_parameter='legal_practice_management.advisory_template_id',
         help='Template to use when creating Legal Subjects (advisory matters)'
     )

@@ -1,5 +1,6 @@
 from . import constants
 from . import legal_case_mixin
+from . import project_stage
 from . import project
 from . import crm_lead
 from . import res_partner

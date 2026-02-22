@@ -45,4 +45,22 @@ CASE_TYPE_SELECTION = [
     ('family', _('Family')),
     ('administrative', _('Administrative')),
     ('other', _('Other')),
-] 
+]
+
+# Pipeline selection options for project and project board stages
+PIPELINE_TYPE_SELECTION = [
+    ('litigation', _('Litigation')),
+    ('legal_subject', _('Legal Subject')),
+]
+
+# Canonical mapping between historical matter_type values and new pipeline_type values
+PIPELINE_TO_MATTER = {
+    'litigation': 'case',
+    'legal_subject': 'subject',
+}
+
+MATTER_TO_PIPELINE = {
+    value: key for key, value in PIPELINE_TO_MATTER.items()
+}
+
+DEFAULT_PIPELINE_TYPE = 'legal_subject'

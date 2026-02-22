@@ -10,6 +10,8 @@
                 <page string="Legal Case Details">
                     <group>
                         <group string="Case Identification">
+                            <field name="pipeline_type" />
+                            <field name="matter_type" />
                             <label for="office_file_number" />
                             <div class="o_row">
                                 <field name="office_file_number"
@@ -66,7 +68,7 @@
         <field name="name">All Legal Entities</field>
         <field name="res_model">project.project</field>
         <field name="view_mode">kanban,list,form</field>
-        <field name="domain">[("tag_ids.name", "in", ["Case", "Matter"])]</field>
+        <field name="domain">[("pipeline_type", "in", ["litigation", "legal_subject"])]</field>
         <!-- <field name="context">{}</field> -->
         <!-- Hide create button in legal entity kanban view -->
         <field name="context">{'group_by': 'stage_id', 'create': False}</field>
@@ -84,8 +86,8 @@
         <field name="name">Litigation Cases</field>
         <field name="res_model">project.project</field>
         <field name="view_mode">kanban,list,form</field>
-        <field name="domain">[("tag_ids.name", "=", "Case")]</field>
-        <field name="context">{'group_by': 'stage_id', 'create_from_cases': True}</field>
+        <field name="domain">[("pipeline_type", "=", "litigation")]</field>
+        <field name="context">{'group_by': 'stage_id', 'create_from_cases': True, 'default_pipeline_type': 'litigation', 'default_matter_type': 'case'}</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Create your first case!
@@ -100,8 +102,8 @@
         <field name="name">Legal Subjects</field>
         <field name="res_model">project.project</field>
         <field name="view_mode">kanban,list,form</field>
-        <field name="domain">[("tag_ids.name", "=", "Matter")]</field>
-        <field name="context">{'group_by': 'stage_id', 'create_from_matters': True}</field>
+        <field name="domain">[("pipeline_type", "=", "legal_subject")]</field>
+        <field name="context">{'group_by': 'stage_id', 'create_from_matters': True, 'default_pipeline_type': 'legal_subject', 'default_matter_type': 'subject'}</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Create your first matter!
@@ -109,6 +111,28 @@
             <p>
                 Create a new matter to start managing legal work.
             </p>
+        </field>
+    </record>
+
+    <record id="view_project_project_stage_form_pipeline" model="ir.ui.view">
+        <field name="name">project.project.stage.form.pipeline</field>
+        <field name="model">project.project.stage</field>
+        <field name="inherit_id" ref="project.project_project_stage_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='company_id']" position="before">
+                <field name="pipeline_type" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_project_project_stage_tree_pipeline" model="ir.ui.view">
+        <field name="name">project.project.stage.tree.pipeline</field>
+        <field name="model">project.project.stage</field>
+        <field name="inherit_id" ref="project.project_project_stage_view_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="pipeline_type" optional="show" />
+            </xpath>
         </field>
     </record>
 

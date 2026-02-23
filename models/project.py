@@ -1,6 +1,9 @@
+import base64
 import logging
+import os
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError, UserError
+from odoo.modules.module import get_module_resource
 from .constants import (
     DEFAULT_PIPELINE_TYPE,
     MATTER_TO_PIPELINE,
@@ -20,11 +23,44 @@ class ProjectProject(models.Model):
 
     # ========== ORM Overrides ==========
     def _register_hook(self):
-        """Keep legacy XML ID while exposing the updated label 'Subject'."""
+        """Keep legacy labels/icons aligned with Legal Practice Management branding."""
         res = super()._register_hook()
+
+        # Keep the historical tag XMLID but expose the new business term.
         tag = self.env.ref('legal_practice_management.project_tag_matter', raise_if_not_found=False)
         if tag and tag.name != 'Subject':
             tag.sudo().write({'name': 'Subject'})
+
+        # Ensure Settings app tile/logo uses the custom module icon instead of default Project icon.
+        project_module = self.env['ir.module.module'].sudo().search([('name', '=', 'project')], limit=1)
+        if project_module:
+            vals = {}
+            shortdesc_field = project_module._fields.get('shortdesc')
+            if shortdesc_field and not shortdesc_field.readonly:
+                vals['shortdesc'] = 'Legal Practice Management'
+            icon_field = project_module._fields.get('icon')
+            if icon_field and not icon_field.readonly:
+                vals['icon'] = '/legal_practice_management/static/description/icon.png'
+
+            icon_path = get_module_resource(
+                'legal_practice_management',
+                'static/description',
+                'icon.png',
+            )
+            icon_image_field = project_module._fields.get('icon_image')
+            if icon_path and os.path.exists(icon_path) and icon_image_field and not icon_image_field.readonly:
+                with open(icon_path, 'rb') as icon_file:
+                    vals['icon_image'] = base64.b64encode(icon_file.read())
+
+            if vals:
+                try:
+                    project_module.write(vals)
+                except Exception as error:
+                    _logger.warning(
+                        "Could not update project module branding fields: %s",
+                        error,
+                        exc_info=True,
+                    )
         return res
 
     @api.model
@@ -180,8 +216,8 @@ class ProjectProject(models.Model):
 
     matter_type = fields.Selection(
         [
-            ('case', 'Legal Case'),
-            ('subject', 'Legal Subject')
+            ('case', _('Legal Case')),
+            ('subject', _('Legal Subject'))
         ],
         required=True,
         default='subject',

@@ -84,19 +84,19 @@ msgstr "حالة العميل"
 #. module: legal_practice_management
 #: model:ir.model.fields,help:legal_practice_management.field_project_project__client_status
 msgid "The client's status in the case e.g(Plaintiff, Defendant, Third Party, etc.)"
-msgstr "حالة العميل في الدعوى مثل (المدعي، المدعى عليه، الطرف الثالث، إلخ)"
+msgstr "حالة العميل في الدعوى مثل (مدعي، مدعى عليه، الطرف الثالث، إلخ)"
 
 #. module: legal_practice_management
 #: model:ir.model.fields.selection,name:legal_practice_management.selection__project_project__client_status__plaintiff
 #: model:ir.model.fields.selection,name:legal_practice_management.selection__project_project__opponent_status__plaintiff
 msgid "Plaintiff"
-msgstr "المدعي"
+msgstr "مدعي"
 
 #. module: legal_practice_management
 #: model:ir.model.fields.selection,name:legal_practice_management.selection__project_project__client_status__defendant
 #: model:ir.model.fields.selection,name:legal_practice_management.selection__project_project__opponent_status__defendant
 msgid "Defendant"
-msgstr "المدعى عليه"
+msgstr "مدعى عليه"
 
 #. module: legal_practice_management
 #: model:ir.model.fields,field_description:legal_practice_management.field_project_project__opponent_status
@@ -106,7 +106,7 @@ msgstr "حالة الخصم"
 #. module: legal_practice_management
 #: model:ir.model.fields,help:legal_practice_management.field_project_project__opponent_status
 msgid "The opponent's status in the case e.g(Plaintiff, Defendant, Third Party, etc.)"
-msgstr "حالة الخصم في الدعوى مثل (المدعي، المدعى عليه، الطرف الثالث، إلخ)"
+msgstr "حالة الخصم في الدعوى مثل (مدعي، مدعى عليه، الطرف الثالث، إلخ)"
 
 #. module: legal_practice_management
 #: model:ir.model.fields,field_description:legal_practice_management.field_project_project__opponent_name
@@ -400,8 +400,9 @@ msgstr "تفاصيل الخصم"
 
 #. module: legal_practice_management
 #: model:ir.ui.menu,name:project.menu_main_pm
+#: model_terms:ir.ui.view,arch_db:legal_practice_management.res_config_settings_view_form
 msgid "Legal Practice Management"
-msgstr "إدارة القضايا والمسائل"
+msgstr "إدارة الممارسة القانونية"
 
 #. module: legal_practice_management
 #: model:ir.ui.menu,name:project.menu_projects
@@ -487,3 +488,40 @@ msgstr "القضايا"
 #: model:ir.ui.menu,name:legal_practice_management.menu_matters
 msgid "Matters"
 msgstr "المسائل" 
+
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_project_project__pipeline_type
+#: model:ir.model.fields,field_description:legal_practice_management.field_project_project_stage__pipeline_type
+msgid "Pipeline Type"
+msgstr "نوع مسار العمل"
+
+#. module: legal_practice_management
+#: model:ir.model.fields,field_description:legal_practice_management.field_project_project__matter_type
+msgid "Matter Type"
+msgstr "نوع الموضوع القانوني"
+
+#. module: legal_practice_management
+msgid "pipeline_type"
+msgstr "نوع مسار العمل"
+
+#. module: legal_practice_management
+msgid "matter_type"
+msgstr "نوع الموضوع القانوني"
+
+#. module: legal_practice_management
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__project_project__pipeline_type__litigation
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__project_project_stage__pipeline_type__litigation
+msgid "Litigation"
+msgstr "تقاضي"
+
+#. module: legal_practice_management
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__project_project__pipeline_type__legal_subject
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__project_project_stage__pipeline_type__legal_subject
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__project_project__matter_type__subject
+msgid "Legal Subject"
+msgstr "مسألة قانونية"
+
+#. module: legal_practice_management
+#: model:ir.model.fields.selection,name:legal_practice_management.selection__project_project__matter_type__case
+msgid "Legal Case"
+msgstr "قضية"

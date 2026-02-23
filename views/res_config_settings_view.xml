@@ -8,6 +8,7 @@
             <xpath expr="//app[@name='project']" position="attributes">
                 <attribute name="string">Legal Practice Management</attribute>
                 <attribute name="data-string">Legal Practice Management</attribute>
+                <attribute name="logo">/legal_practice_management/static/description/icon.png</attribute>
             </xpath>
             <xpath expr="//app[@name='project']" position="inside">
                 <block title="Legal Practice Management Templates"
